@@ -4,11 +4,11 @@ require 'graphql/client/http'
 require_relative 'submission'
 
 class PupilfirstAPI
-  ENDPOINT = ENV['REVIEW_END_POINT']
+  ENDPOINT = ENV.fetch('REVIEW_END_POINT', "")
 
   HTTP = GraphQL::Client::HTTP.new(ENDPOINT) do
     def headers(context)
-      { "Authorization": "Bearer #{ENV['REVIEW_BOT_USER_TOKEN']}" }
+      { "Authorization": "Bearer #{ENV.fetch('REVIEW_BOT_USER_TOKEN')}" }
     end
   end
 
@@ -35,7 +35,7 @@ class PupilfirstAPI
   GRAPHQL
 
   def initialize
-    @test_mode = ENV['TEST_MODE'] == 'true'
+    @test_mode = ENV.fetch('TEST_MODE') == 'true'
     @submission = Submission.new
   end
 
