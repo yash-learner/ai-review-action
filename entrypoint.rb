@@ -22,4 +22,4 @@ def generate_response
     end
 end
 
-response
+File.write('/tmp/output.json', generate_response.to_json)
