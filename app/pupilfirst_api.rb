@@ -4,7 +4,7 @@ require 'graphql/client/http'
 require_relative 'submission'
 
 class PupilfirstAPI
-  ENDPOINT = ENV.fetch('REVIEW_END_POINT', "")
+  ENDPOINT = ENV.fetch('https://www.pupilfirst.school/graphql', "")
 
   HTTP = GraphQL::Client::HTTP.new(ENDPOINT) do
     def headers(context)
