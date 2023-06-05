@@ -1,37 +1,29 @@
 require 'openai'
 require 'dotenv/load'
+require 'json'
+require 'pry'
+require_relative 'app/open_ai_client'
+require_relative 'app/submission'
 
 OpenAI.configure do |config|
     config.access_token = ENV.fetch("OPENAI_ACCESS_TOKEN")
     # config.organization_id = ENV.fetch("OPENAI_ORGANIZATION_ID", "") # Optional.
 end
 
-system_prompt_default = <<-SYSTEM_PROMPT
-    You are an automated teacher assistant. You are helping the teacher grade a student's homework.
-    The system will always respond with the following json file:
-    {
-        "status": "passed" or "failed",
-        "feedback": "The feedback for the students submission in markdown
-    }
+def generate_response
+    @generate_response ||=
+    begin
+        JSON.parse(OpenAIClient.new.ask)
+    rescue => exception
+        {
+            status: "failed",
+            feedback: "Failure message"
+        }
+    end
+end
 
-    The student's submission is the following:
-    #{ENV.fetch("INPUT_PROMPT")}
-    SYSTEM_PROMPT
 
-system_prompt = ENV.fetch("INPUT_SYSTEM_PROMPT", system_prompt_default)
-user_prompt = ENV.fetch("INPUT_PROMPT")
+binding.pry
 
-client = OpenAI::Client.new
-
-response = client.chat(
-    parameters: {
-        model: "gpt-3.5-turbo", # Required.
-        messages: [
-            { role: "user", content: system_prompt }
-        ],
-        temperature: 0.7,
-    })
-
-puts response.dig("choices", 0, "message", "content")
-
+# response = OpenAIClient.new.ask
 puts response
