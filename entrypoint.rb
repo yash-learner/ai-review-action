@@ -22,8 +22,4 @@ def generate_response
     end
 end
 
-
-binding.pry
-
-# response = OpenAIClient.new.ask
-puts response
+response
