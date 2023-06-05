@@ -1,0 +1,9 @@
+name: 'GPT-4 Chat API Action'
+description: 'Use GPT-4 Chat API with Ruby'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+inputs:
+  prompt:
+    description: 'Prompt for the GPT-4 Chat API'
+    required: true

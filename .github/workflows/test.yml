@@ -1,0 +1,23 @@
+name: 'build-test'
+on: # rebuild any PRs and main branch changes
+  pull_request:
+  push:
+    branches:
+      - main
+      - 'releases/*'
+env:
+  OPENAI_ACCESS_TOKEN: ${{ secrets.OPENAI_ACCESS_TOKEN }}
+  OPENAI_ORGANIZATION_ID: ${{ secrets.OPENAI_ORGANIZATION_ID }}
+jobs:
+  test: # make sure the action works on a clean machine without building
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./
+        with:
+          prompt: |
+            Question: Write down revised questions here.
+            Answer from the student:
+              1)Firstly I would like to thank for Providing the set of resources and materials to create games graphics project. But I would be very grateful if you could provide me with some more information about the steps needed to start the project.
+              2)I have learned some basic about HTML canvas by referring to the material. But it would be more helpful if you could provide me the key areas that are required in HTML canvas to build project.
+              3)I would be very thankful if you could guide me on how to make game interactive.
