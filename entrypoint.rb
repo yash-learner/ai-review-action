@@ -4,6 +4,7 @@ require 'json'
 require 'pry'
 require_relative 'app/open_ai_client'
 require_relative 'app/submission'
+require_relative 'app/pupilfirst_api'
 
 OpenAI.configure do |config|
     config.access_token = ENV.fetch("OPENAI_ACCESS_TOKEN")
@@ -16,10 +17,14 @@ def generate_response
         JSON.parse(OpenAIClient.new.ask)
     rescue => exception
         {
-            status: "failed",
+            status: "failure",
             feedback: "Failure message"
         }
     end
 end
 
-File.write('/tmp/output.json', generate_response.to_json)
+PupilfirstAPI.new.grade(generate_response)
+
+# binding.pry
+
+# File.write('/tmp/output.json', generate_response.to_json)

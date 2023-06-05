@@ -1,25 +1,77 @@
-# require "graphql/client"
-# require "graphql/client/http"
+require 'json'
+require 'graphql/client'
+require 'graphql/client/http'
+require_relative 'submission'
 
-# # Star Wars API example wrapper
-# module PupilfirstAPI
-#   # Configure GraphQL endpoint using the basic HTTP network adapter.
-#   HTTP = GraphQL::Client::HTTP.new("https://pupilfirst.school/graphql") do
-#     def headers(context)
-#       # Optionally set any HTTP headers
-#       { "User-Agent": "My Client" }
-#     end
-#   end
+class PupilfirstAPI
+  ENDPOINT = ENV['REVIEW_END_POINT']
 
-#   # Fetch latest schema on init, this will make a network request
-#   Schema = GraphQL::Client.load_schema(HTTP)
+  HTTP = GraphQL::Client::HTTP.new(ENDPOINT) do
+    def headers(context)
+      { "Authorization": "Bearer #{ENV['REVIEW_BOT_USER_TOKEN']}" }
+    end
+  end
 
-#   # However, it's smart to dump this to a JSON file and load from disk
-#   #
-#   # Run it from a script or rake task
-#   #   GraphQL::Client.dump_schema(SWAPI::HTTP, "path/to/schema.json")
-#   #
-#   # Schema = GraphQL::Client.load_schema("path/to/schema.json")
 
-#   Client = GraphQL::Client.new(schema: Schema, execute: HTTP)
-# end
+  Schema = GraphQL::Client.load_schema("./graphql_schema.json")
+  Client = GraphQL::Client.new(schema: Schema, execute: HTTP)
+
+  REVIEW_MUTATION = Client.parse <<-'GRAPHQL'
+    mutation GradeSubmission(
+      $submissionId: ID!
+      $grades: [GradeInput!]!
+      $checklist: JSON!
+      $feedback: String
+    ) {
+      createGrading(
+        submissionId: $submissionId
+        grades: $grades
+        checklist: $checklist
+        feedback: $feedback
+      ) {
+        success
+      }
+    }
+  GRAPHQL
+
+  def initialize
+    @test_mode = ENV['TEST_MODE'] == 'true'
+    @submission = Submission.new
+  end
+
+
+  def grade(result)
+    valid_statuses = ['success', 'failure']
+
+    variables = {
+      submissionId: @submission.id,
+      grades: get_grades(@submission.evaluation_criteria, result['status'] == 'success'),
+      checklist: @submission.checklist,
+      feedback: result['feedback']
+    }
+
+    begin
+      if @test_mode
+        puts "variables: #{variables}"
+      else
+        if (valid_statuses.include?(result['status']))
+          data = Client.query(REVIEW_MUTATION, variables: variables)
+          puts data.data
+        else
+          puts 'Skipped grading'
+        end
+      end
+    rescue StandardError => e
+      puts e
+    end
+  end
+
+  def get_grades(evaluation_criteria, is_passed)
+    evaluation_criteria.map do |ec|
+      {
+        evaluation_criterion_id: ec['id'],
+        grade: is_passed ? ec['pass_grade'] : ec['pass_grade'] - 1
+      }
+    end
+  end
+end

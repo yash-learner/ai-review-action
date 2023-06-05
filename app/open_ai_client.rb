@@ -66,7 +66,7 @@ Please provide your response in the following JSON format (adhere to the format 
 
 ```json
 {
-    "status": "\"passed\" or \"failed\"",
+    "status": "\"success\" or \"failure\"",
     "feedback": "Detailed feedback for the student in markdown format. Aim for a human-like explanation as much as possible"
 }
 ```

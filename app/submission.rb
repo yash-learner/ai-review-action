@@ -3,6 +3,10 @@ class Submission
     @submission_data = JSON.parse(File.read('./submission.json'))
   end
 
+  def id
+    @submission_data['id']
+  end
+
   def data
     @submission_data
   end

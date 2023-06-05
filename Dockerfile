@@ -4,8 +4,9 @@ RUN gem install ruby-openai dotenv pry graphql-client
 
 COPY entrypoint.rb /entrypoint.rb
 COPY app/ /app
-COPY entrypoint.sh /entrypoint.sh
+COPY graphql_schema.json /graphql_schema.json
+# COPY entrypoint.sh /entrypoint.sh
 
-RUN chmod +x /entrypoint.sh
+# RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/usr/local/bin/ruby", "/entrypoint.rb"]

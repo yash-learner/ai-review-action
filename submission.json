@@ -1,0 +1,33 @@
+{
+  "id": 1468464,
+  "students": [110587],
+  "created_at": "2023-06-05T10:47:09.140+05:30",
+  "updated_at": "2023-06-05T10:47:09.140+05:30",
+  "target_id": 19643,
+  "checklist": [
+    {
+      "kind": "longText",
+      "title": "Write up a conversation between you (a student) and an instructor at Pupilfirst. Use at least 200 words.",
+      "result": "Student: Hello sir, I'm currently facing an issue with establishing a database connection using PostgreSQL while \t\t   working on a capstone project.\n \nInstructor: Could you please provide detailed information about the issues you're experiencing? \n\nStudent: Sure sir, when I'm trying to connect to a PostgreSQL database using sequelize, a promised-based \t\t      \t   ORM for connecting to the Postgres database. I've installed the library using the \"npm\" command and took     \t   the necessary steps to establish the connection, but I keep getting an error message that says. -\u003e\"FATAL: \t   role 'username' does not exist\". -\u003eConnection refused!! \n\nInstructor: By looking at your error message, it indicates that the role you're using to connect to the database \t  \t      does not exist. besides, there is another application running on the server that you are using to \t   \t      create a database. Can you confirm that you have created the role in PostgreSQL and server is free  \t  \t      from other applications? \n\nStudent: Yes, I have created a role in PostgreSQL using the following statement: -\u003e CREATE ROLE \"my user\" WITH \t \t   LOGIN PASSWORD 'password'; After creating the role, I proceeded to write the code to establish the \t  \t   connection in JavaScript. Besides, how to check whether applications are running on a particular port \t  \t   number.\n\nInstructor: So, just to make sure that you used the role name \"My user\" and set the password as \"password\". Did \t   \t      you face any problems during the role-creation process? And to check the port number of different \t \t      applications follow these simple steps: \n            -\u003eOpen the command prompt - start \u003e\u003e run \u003e\u003e cmd or start \u003e\u003e All Programs \u003e\u003e Accessories \u003e\u003e Command \t \t\tPrompt.\n\nStudent: No, the role creation was successful. I didn't encounter any issues while creating the role. However, \t\t   when I run my JavaScript code to establish the connection, that's when I encounter the problem which \t\t   says:\n             -\u003e\"FATAL: role 'username' does not exist.\" \n         By the way, by following the steps to check the applications port I encountered that 2 applications are  \t   running on the same port. I killed the port using the \"npx\" command. The problem of Connection refusal is  \t   resolved. \n\nInstructor: So glad that your Connection refusal issue is resolved. Coming to your Database connection problem, I \t\tguess there might be a mismatch between the role name you used during role creation and the username        \t      you're specifying while establishing a database connection. Could you please share the relevant code  \t \tsnippet you're using to establish the connection. \n\nStudent: Sure sir, Here's the code snippet of the config file used to establish connection:\n -\u003e{ \"development\": { \"username\": \"postgres\", \n\"password\": \"mallik\", \n\"database\": \"appointment_db_dev\", \n\"host\": \"127.0.0.1\", \n\"dialect\": \"postgres\" },\n\nInstructor: By looking at your code, it appears that you're using the username \"postgres\" in the user parameter. I \t\twould request you replace it with the actual role name you created.\n \nStudent: yeah sir, I can see my mistake now. I used a placeholder \"Postgres\" instead of the actual role name \"my \t\t   user\". That must be the reason for the error. I will make the changes and try again. Thank you for  \t\t   pointing that out. \n\nInstructor: You're welcome! If you face any further difficulties or have more questions, feel free to ask. \n\nStudent: Thank you so much for your guidance, I appreciate your help. I'll make the necessary changes and try  \t\t   again.\n\nInstructor: You're welcome, I'm happy to assist you. Don't hesitate to ask if you need further assistance.",
+      "status": "noAnswer"
+    }
+  ],
+  "level_number": 1,
+  "target": {
+    "id": 19643,
+    "title": "English Language 101",
+    "evaluation_criteria": [
+      {
+        "id": 3361,
+        "name": "Accepted",
+        "max_grade": 2,
+        "pass_grade": 2,
+        "grade_labels": [
+          { "grade": 1, "label": "No" },
+          { "grade": 2, "label": "Yes" }
+        ]
+      }
+    ]
+  },
+  "files": []
+}
