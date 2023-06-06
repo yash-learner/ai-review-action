@@ -7,7 +7,7 @@ require_relative 'submission'
 module PupilfirstAPI
 
   module API
-    HTTP = GraphQL::Client::HTTP.new('https://www.pupilfirst.school/graphql') do
+    HTTP = GraphQL::Client::HTTP.new(ENV.fetch('REVIEW_END_POINT')) do
       def headers(_context)
         { "Authorization": "Bearer #{ENV.fetch('REVIEW_BOT_USER_TOKEN')}" }
       end

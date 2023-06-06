@@ -14,11 +14,7 @@ end
 def generate_response
     @generate_response ||=
     begin
-        # JSON.parse(OpenAIClient.new.ask)
-        {
-            "status": "failure",
-            "feedback": "Failure message"
-        }
+        JSON.parse(OpenAIClient.new.ask)
     rescue => exception
         {
             status: "failure",
