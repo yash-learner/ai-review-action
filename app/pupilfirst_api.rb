@@ -33,13 +33,13 @@ module PupilfirstAPI
     end
 
     def grade(result)
-      return puts 'Skipped grading' unless valid_status?(result[:status])
+      return puts 'Skipped grading' unless valid_status?(result['status'])
 
       variables = {
         submissionId: @submission.id,
-        grades: grades_based_on(result[:status]),
+        grades: grades_based_on(result['status']),
         checklist: @submission.checklist,
-        feedback: result[:feedback]
+        feedback: result['feedback']
       }
 
       puts "variables: #{variables}" if @test_mode
