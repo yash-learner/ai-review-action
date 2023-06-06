@@ -14,7 +14,11 @@ end
 def generate_response
     @generate_response ||=
     begin
-        JSON.parse(OpenAIClient.new.ask)
+        # JSON.parse(OpenAIClient.new.ask)
+        {
+            "status": "failure",
+            "feedback": "Failure message"
+        }
     rescue => exception
         {
             status: "failure",
@@ -23,7 +27,7 @@ def generate_response
     end
 end
 
-PupilfirstAPI.new.grade(generate_response)
+PupilfirstAPI::Grader.new.grade(generate_response)
 
 # binding.pry
 

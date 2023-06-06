@@ -3,75 +3,78 @@ require 'graphql/client'
 require 'graphql/client/http'
 require_relative 'submission'
 
-class PupilfirstAPI
-  ENDPOINT = 'https://www.pupilfirst.school/graphql'
+# Pupilfirst API example wrapper
+module PupilfirstAPI
 
-  HTTP = GraphQL::Client::HTTP.new(ENDPOINT) do
-    def headers(context)
-      { "Authorization": "Bearer #{ENV.fetch('REVIEW_BOT_USER_TOKEN')}" }
+  module API
+    HTTP = GraphQL::Client::HTTP.new('https://www.pupilfirst.school/graphql') do
+      def headers(_context)
+        { "Authorization": "Bearer #{ENV.fetch('REVIEW_BOT_USER_TOKEN')}" }
+      end
     end
+
+    Schema = GraphQL::Client.load_schema("graphql_schema.json")
+
+    Client = GraphQL::Client.new(schema: Schema, execute: HTTP)
   end
 
-
-  Schema = GraphQL::Client.load_schema("./graphql_schema.json")
-  Client = GraphQL::Client.new(schema: Schema, execute: HTTP)
-
-  REVIEW_MUTATION = Client.parse <<-'GRAPHQL'
-    mutation GradeSubmission(
-      $submissionId: ID!
-      $grades: [GradeInput!]!
-      $checklist: JSON!
-      $feedback: String
-    ) {
-      createGrading(
-        submissionId: $submissionId
-        grades: $grades
-        checklist: $checklist
-        feedback: $feedback
-      ) {
+  GradeMutation = API::Client.parse <<-'GRAPHQL'
+    mutation($submissionId: ID!, $grades: [GradeInput!]!, $checklist: JSON!, $feedback: String) {
+      createGrading(submissionId: $submissionId, grades: $grades, checklist: $checklist, feedback: $feedback) {
         success
       }
     }
   GRAPHQL
 
-  def initialize
-    @test_mode = ENV.fetch('TEST_MODE') == 'true'
-    @submission = Submission.new
-  end
+  class Grader
+    def initialize(submission = Submission.new)
+      @submission = submission
+      @test_mode = ENV.fetch('TEST_MODE', 'false') == 'true'
+    end
 
+    def grade(result)
+      return puts 'Skipped grading' unless valid_status?(result[:status])
 
-  def grade(result)
-    valid_statuses = ['success', 'failure']
+      variables = {
+        submissionId: @submission.id,
+        grades: grades_based_on(result[:status]),
+        checklist: @submission.checklist,
+        feedback: result[:feedback]
+      }
 
-    variables = {
-      submissionId: @submission.id,
-      grades: get_grades(@submission.evaluation_criteria, result['status'] == 'success'),
-      checklist: @submission.checklist,
-      feedback: result['feedback']
-    }
+      puts "variables: #{variables}" if @test_mode
 
-    begin
-      if @test_mode
-        puts "variables: #{variables}"
-      else
-        if (valid_statuses.include?(result['status']))
-          data = Client.query(REVIEW_MUTATION, variables: variables)
-          puts data.data
-        else
-          puts 'Skipped grading'
-        end
-      end
+      create_grading(variables) unless @test_mode
     rescue StandardError => e
       puts e
     end
-  end
 
-  def get_grades(evaluation_criteria, is_passed)
-    evaluation_criteria.map do |ec|
-      {
-        evaluation_criterion_id: ec['id'],
-        grade: is_passed ? ec['pass_grade'] : ec['pass_grade'] - 1
-      }
+    private
+
+    def valid_status?(status)
+      %w[success failure].include?(status)
+    end
+
+    def grades_based_on(status)
+      @submission.evaluation_criteria.map do |criteria|
+        {
+          evaluationCriterionId: criteria['id'],
+          grade: grade_for(criteria, status)
+        }
+      end
+    end
+
+    def grade_for(criteria, status)
+      status == 'success' ? criteria['pass_grade'] : criteria['pass_grade'] - 1
+    end
+
+    def create_grading(variables)
+      result = API::Client.query(GradeMutation, variables: variables)
+      if result.data
+        puts result.data.create_grading.success
+      else
+        puts result.errors["data"]
+      end
     end
   end
 end
