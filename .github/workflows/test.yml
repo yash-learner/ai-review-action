@@ -1,13 +1,15 @@
-name: 'build-test'
+name: "build-test"
 on: # rebuild any PRs and main branch changes
   pull_request:
   push:
     branches:
       - main
-      - 'releases/*'
+      - "releases/*"
 env:
   OPENAI_ACCESS_TOKEN: ${{ secrets.OPENAI_ACCESS_TOKEN }}
   OPENAI_ORGANIZATION_ID: ${{ secrets.OPENAI_ORGANIZATION_ID }}
+  REVIEW_BOT_USER_TOKEN: ${{ secrets.REVIEW_BOT_USER_TOKEN }}
+  REVIEW_END_POINT: ${{ secrets.REVIEW_END_POINT }}
 jobs:
   test: # make sure the action works on a clean machine without building
     runs-on: ubuntu-latest
@@ -15,9 +17,28 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ./
         with:
-          prompt: |
-            Question: Write down revised questions here.
-            Answer from the student:
-              1)Firstly I would like to thank for Providing the set of resources and materials to create games graphics project. But I would be very grateful if you could provide me with some more information about the steps needed to start the project.
-              2)I have learned some basic about HTML canvas by referring to the material. But it would be more helpful if you could provide me the key areas that are required in HTML canvas to build project.
-              3)I would be very thankful if you could guide me on how to make game interactive.
+          ROLE_PROMPT: "You are an advanced English Language Teaching Assistant AI. Your task involves reviewing and providing feedback on student submissions, paying meticulous attention to grammar, punctuation, and style errors."
+          USER_PROMPT: >
+            The conversation should include the following:
+            - The specific Discord channel the conversation takes place in.
+            - The initial question, marked with "Student: ", outlining the student's doubt.
+            - The instructor's response, labelled with "Instructor: ", that provides a solution.
+            - A follow-up question for clarification, again starting with "Student: ", to delve into what the instructor meant.
+
+            Ensure that the student applies the lessons they learned in the current level:
+            - Provide context, steps taken, and error messages for both the initial question and the follow-up.
+            - Frame questions around the "why" and "how" aspects.
+            - Ask for additional examples, if necessary.
+            - Thank the instructor in a proper and considerate manner.
+
+            The feedback should focus on the following areas (with the ideal condition in brackets):
+            1. Providing Context & Background (The student delivers clear and detailed context, steps taken, and error messages).
+            2. Clarity (The conversation is clear and easy to understand throughout).
+            3. Expressing Thanks (The student thanks the instructor genuinely and appropriately).
+            4. Appropriate Tone & Etiquette (The student maintains a professional and respectful tone throughout the conversation).
+
+            Make sure to identify and highlight all grammar, punctuation, and style errors.
+
+            The student's submission will be as follows:
+
+            ${SUBMISSION}

@@ -8,7 +8,7 @@ require_relative 'app/pupilfirst_api'
 
 OpenAI.configure do |config|
     config.access_token = ENV.fetch("OPENAI_ACCESS_TOKEN")
-    # config.organization_id = ENV.fetch("OPENAI_ORGANIZATION_ID", "") # Optional.
+    config.organization_id = ENV.fetch("OPENAI_ORGANIZATION_ID", "") # Optional.
 end
 
 def generate_response
@@ -17,7 +17,7 @@ def generate_response
         JSON.parse(OpenAIClient.new.ask)
     rescue => exception
         {
-            status: "failure",
+            status: "skip",
             feedback: "Failure message"
         }
     end
