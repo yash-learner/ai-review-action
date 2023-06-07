@@ -41,6 +41,3 @@ inputs:
   REVIEW_BOT_USER_TOKEN:
     description: 'Token used for authorization when sending the reviews to the LMS'
     required: true
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
