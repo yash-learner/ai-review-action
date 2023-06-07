@@ -33,6 +33,7 @@ class OpenAIClient
     .gsub("${OUTPUT_DESCRIPTION}", default_output_prompt)
     .gsub("${ROLE_PROMPT}", default_role_prompt)
     .gsub("${USER_PROMPT}", default_user_prompt)
+  end
 
   def system_prompt_default
 <<-SYSTEM_PROMPT
