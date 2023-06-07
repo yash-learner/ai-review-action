@@ -52,7 +52,7 @@ jobs:
       - name: AI auto review
         id: ai-review
         uses: pupilfirst/ai-review-action@v1
-        with:
+        env:
           ROLE_PROMPT: "You are an advanced English Language Teaching Assistant AI. Your task involves reviewing and providing feedback on student submissions, paying meticulous attention to grammar, punctuation, and style errors."
           USER_PROMPT: >
             The conversation should include the following:
