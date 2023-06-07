@@ -52,7 +52,7 @@ module PupilfirstAPI
     private
 
     def valid_status?(status)
-      %w[success failure].include?(status)
+      %w[passed failed].include?(status)
     end
 
     def grades_based_on(status)
@@ -65,7 +65,7 @@ module PupilfirstAPI
     end
 
     def grade_for(criteria, status)
-      status == 'success' ? criteria['pass_grade'] : criteria['pass_grade'] - 1
+      status == 'passed' ? criteria['pass_grade'] : criteria['pass_grade'] - 1
     end
 
     def create_grading(variables)

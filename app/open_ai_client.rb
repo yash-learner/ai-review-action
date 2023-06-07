@@ -6,10 +6,10 @@ class OpenAIClient
     @model = ENV.fetch('OPEN_AI_MODEL', "gpt-3.5-turbo")
     @temperature = ENV.fetch('OPEN_AI_TEMPERATURE', 0.1)
     @system_prompt = ENV.fetch('SYSTEM_PROMPT', system_prompt_default)
-    @user_prompt = ENV.fetch('USER_PROMPT')
   end
 
   def ask
+    puts prompt
     response = @client.chat(
         parameters: {
             model: @model,
@@ -28,11 +28,11 @@ class OpenAIClient
 
   def prompt
     @system_prompt
-    .gsub("${SUBMISSION}", Submission.new.checklist)
-    .gsub("${INPUT_DESCRIPTION}", default_input_prompt)
-    .gsub("${OUTPUT_DESCRIPTION}", default_output_prompt)
     .gsub("${ROLE_PROMPT}", default_role_prompt)
+    .gsub("${INPUT_DESCRIPTION}", default_input_prompt)
     .gsub("${USER_PROMPT}", default_user_prompt)
+    .gsub("${SUBMISSION}", "#{Submission.new.checklist}")
+    .gsub("${OUTPUT_DESCRIPTION}", default_output_prompt)
   end
 
   def system_prompt_default
@@ -81,7 +81,7 @@ Please provide your response in the following JSON format (adhere to the format 
 
 ```json
 {
-    "status": "\"success\" or \"failure\"",
+    "status": "\"passed\" or \"failed\"",
     "feedback": "Detailed feedback for the student in markdown format. Aim for a human-like explanation as much as possible"
 }
 ```

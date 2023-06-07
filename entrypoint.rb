@@ -24,7 +24,3 @@ def generate_response
 end
 
 PupilfirstAPI::Grader.new.grade(generate_response)
-
-# binding.pry
-
-# File.write('/tmp/output.json', generate_response.to_json)
