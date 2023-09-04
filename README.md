@@ -85,3 +85,28 @@ jobs:
           status: "success"
           description: AI has reviewed the submission successfully
 ```
+
+## Releasing a new version
+
+1. **Delete the Local Tag**: First, delete the local `v1` tag.
+
+   ```bash
+   git tag -d v1
+   ```
+
+2. **Delete the Remote Tag**: Then, delete it on the remote repository as well.
+
+   ```bash
+   git push --delete origin v1
+   ```
+
+3. **Add the Tag to the New Commit**: Now tag the latest commit `v1`.
+
+   ```bash
+   git tag v1 <commit_sha>
+   ```
+
+4. **Push the New Tag**: Finally, push this new tag to the repository.
+   ```bash
+   git push origin v1
+   ```
