@@ -53,9 +53,12 @@ runs:
       run: |
         gem install graphql -v 2.0.27
         gem install ruby-openai dotenv pry graphql-client
+      shell: bash
 
     - name: 'Create JSON prompts file'
-      run: echo "${{ inputs }}" > prompts.json
+      run: echo "${{ toJSON(inputs) }}" > prompts.json
+      shell: bash
 
     - name: 'Run the ruby script'
       run: ruby ./entrypoint.rb
+      shell: bash
