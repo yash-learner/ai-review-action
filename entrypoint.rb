@@ -23,7 +23,7 @@ def generate_response
     end
 end
 
-file_path = "#{ENV['GITHUB_ACTION_PATH']}/prompts.json"
+file_path = "/prompts.json"
 if File.exist?(file_path)
     puts "Found prompts.json at #{file_path}"
 else
