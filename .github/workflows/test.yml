@@ -28,10 +28,34 @@ jobs:
 
       - name: Create JSON input file
         run: |
-          echo '{
-            "ROLE_PROMPT": "You are an advanced English Language Teaching Assistant AI. Your task involves reviewing and providing feedback on student submissions, paying meticulous attention to grammar, punctuation, and style errors.",
-            "USER_PROMPT": "The conversation should include the following:\n- The specific Discord channel the conversation takes place in.\n- The initial question, marked with \"Student: \", outlining the student\'s doubt.\n- The instructor\'s response, labelled with \"Instructor: \", that provides a solution.\n- A follow-up question for clarification, again starting with \"Student: \", to delve into what the instructor meant.\n\nEnsure that the student applies the lessons they learned in the current level:\n- Provide context, steps taken, and error messages for both the initial question and the follow-up.\n- Frame questions around the \"why\" and \"how\" aspects.\n- Ask for additional examples, if necessary.\n- Thank the instructor in a proper and considerate manner.\n\nThe feedback should focus on the following areas (with the ideal condition in brackets):\n1. Providing Context & Background (The student delivers clear and detailed context, steps taken, and error messages).\n2. Clarity (The conversation is clear and easy to understand throughout).\n3. Expressing Thanks (The student thanks the instructor genuinely and appropriately).\n4. Appropriate Tone & Etiquette (The student maintains a professional and respectful tone throughout the conversation).\n\nMake sure to identify and highlight all grammar, punctuation, and style errors.\n\nThe student\'s submission will be as follows:\n\n${SUBMISSION}",
-          }' > prompts.json
+          cat <<EOF > prompts.json
+{
+  "ROLE_PROMPT": "You are an advanced English Language Teaching Assistant AI. Your task involves reviewing and providing feedback on student submissions, paying meticulous attention to grammar, punctuation, and style errors.",
+  "USER_PROMPT": "The conversation should include the following:
+- The specific Discord channel the conversation takes place in.
+- The initial question, marked with \"Student: \", outlining the student's doubt.
+- The instructor's response, labelled with \"Instructor: \", that provides a solution.
+- A follow-up question for clarification, again starting with \"Student: \", to delve into what the instructor meant.
+
+Ensure that the student applies the lessons they learned in the current level:
+- Provide context, steps taken, and error messages for both the initial question and the follow-up.
+- Frame questions around the \"why\" and \"how\" aspects.
+- Ask for additional examples, if necessary.
+- Thank the instructor in a proper and considerate manner.
+
+The feedback should focus on the following areas (with the ideal condition in brackets):
+1. Providing Context & Background (The student delivers clear and detailed context, steps taken, and error messages).
+2. Clarity (The conversation is clear and easy to understand throughout).
+3. Expressing Thanks (The student thanks the instructor genuinely and appropriately).
+4. Appropriate Tone & Etiquette (The student maintains a professional and respectful tone throughout the conversation).
+
+Make sure to identify and highlight all grammar, punctuation, and style errors.
+
+The student's submission will be as follows:
+
+\${SUBMISSION}"
+}
+EOF
 
       - name: Run the ruby script
         run: ruby ./entrypoint.rb
