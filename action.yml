@@ -68,5 +68,5 @@ runs:
       shell: bash
 
     - name: 'Run the ruby script'
-      run: ruby /ai-review-action/entrypoint.rb
+      run: ruby  ${{ github.action_path }}/entrypoint.rb
       shell: bash
