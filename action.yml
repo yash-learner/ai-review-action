@@ -56,7 +56,15 @@ runs:
       shell: bash
 
     - name: 'Create JSON prompts file'
-      run:  "${{ toJSON(inputs) }}" > prompts.json
+      run:  |
+        cat <<EOF > prompts.json
+        {
+          "ROLE_PROMPT": "${{ inputs.ROLE_PROMPT }}",
+          "USER_PROMPT": "${{ inputs.USER_PROMPT }}",
+          "INPUT_DESCRIPTION": "${{ inputs.INPUT_DESCRIPTION }}",
+          "OUTPUT_DESCRIPTION": "${{ inputs.OUTPUT_DESCRIPTION }}"
+        }
+        EOF
       shell: bash
 
     - name: 'Run the ruby script'
