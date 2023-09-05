@@ -23,16 +23,6 @@ def generate_response
     end
 end
 
-file_path = "#{ENV['GITHUB_WORKSPACE']}/prompts.json"
-puts "PATH"
-puts ENV['GITHUB_WORKSPACE']
-if File.exist?(file_path)
-    puts "Found prompts.json at #{file_path}"
-else
-    puts "prompts.json not found at #{file_path}"
-end
-
-puts JSON.parse(File.read(file_path))
-
+puts JSON.parse(File.read("#{ENV['GITHUB_WORKSPACE']}/prompts.json"))
 
 PupilfirstAPI::Grader.new.grade(generate_response)
