@@ -15,7 +15,7 @@ module PupilfirstAPI
 
     schema_path = "#{ENV['GITHUB_ACTION_PATH']}/app/graphql_schema.json"
 
-    Schema = GraphQL::Client.load_schema('./app/graphql_schema.json')
+    Schema = GraphQL::Client.load_schema(schema_path)
 
     Client = GraphQL::Client.new(schema: Schema, execute: HTTP)
   end
