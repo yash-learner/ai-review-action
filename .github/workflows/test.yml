@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          gem instal graphql -v 1.13.19
+          gem install graphql -v 1.13.19
           gem install ruby-openai dotenv pry graphql-client
 
       - name: Create JSON input file
