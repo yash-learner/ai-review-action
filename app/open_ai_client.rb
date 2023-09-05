@@ -7,7 +7,7 @@ class OpenAIClient
     @model = ENV.fetch('OPEN_AI_MODEL', "gpt-3.5-turbo")
     @temperature = ENV.fetch('OPEN_AI_TEMPERATURE', 0.1)
 
-    prompts = JSON.parse(File.read("#{ENV['GITHUB_ACTION_PATH']}/prompts.json"))
+    prompts = JSON.parse(File.read("#{ENV['GITHUB_WORKSPACE']}/prompts.json"))
     @role_prompt = prompts.fetch("ROLE_PROMPT", default_role_prompt)
     @user_prompt = prompts.fetch("USER_PROMPT", default_user_prompt)
     @input_description = prompts.fetch("INPUT_DESCRIPTION", default_input_prompt)
