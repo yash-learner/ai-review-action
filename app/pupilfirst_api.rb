@@ -13,7 +13,7 @@ module PupilfirstAPI
       end
     end
 
-    Schema = GraphQL::Client.load_schema('./graphql_schema.json')
+    Schema = GraphQL::Client.load_schema('./app/graphql_schema.json')
 
     Client = GraphQL::Client.new(schema: Schema, execute: HTTP)
   end
