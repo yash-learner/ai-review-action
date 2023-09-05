@@ -40,3 +40,5 @@ jobs:
             Make sure to identify and highlight all grammar, punctuation, and style errors.
 
             The student's submission will be as follows:
+
+            ${SUBMISSION}
