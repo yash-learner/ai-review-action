@@ -61,6 +61,7 @@ runs:
         echo "USER_PROMPT_ESCAPED=$(echo -n "${{ inputs.USER_PROMPT }}" | sed ':a;N;$!ba;s/\n/\\n/g')" >> $GITHUB_ENV
         echo "INPUT_DESCRIPTION_ESCAPED=$(echo -n "${{ inputs.INPUT_DESCRIPTION }}" | sed ':a;N;$!ba;s/\n/\\n/g')" >> $GITHUB_ENV
         echo "OUTPUT_DESCRIPTION_ESCAPED=$(echo -n "${{ inputs.OUTPUT_DESCRIPTION }}" | sed ':a;N;$!ba;s/\n/\\n/g')" >> $GITHUB_ENV
+      shell: bash
 
 
     - name: 'Create JSON prompts file'
