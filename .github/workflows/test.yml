@@ -17,17 +17,17 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ./
         with:
-          ROLE_PROMPT: 'You are an advanced English Language Teaching Assistant AI. Your task involves reviewing and providing feedback on student submissions, paying meticulous attention to grammar, punctuation, and style errors.'
-          USER_PROMPT: >
+          ROLE_PROMPT: "You are an advanced English Language Teaching Assistant AI. Your task involves reviewing and providing feedback on student submissions, paying meticulous attention to grammar, punctuation, and style errors."
+          USER_PROMPT: |
             The conversation should include the following:
             - The specific Discord channel the conversation takes place in.
-            - The initial question, marked with \"Student: \", outlining the student's doubt.
-            - The instructor's response, labelled with \"Instructor: \", that provides a solution.
-            - A follow-up question for clarification, again starting with \"Student: \", to delve into what the instructor meant.
+            - The initial question, marked with "Student: ", outlining the student's doubt.
+            - The instructor's response, labelled with "Instructor: ", that provides a solution.
+            - A follow-up question for clarification, again starting with "Student: ", to delve into what the instructor meant.
 
             Ensure that the student applies the lessons they learned in the current level:
             - Provide context, steps taken, and error messages for both the initial question and the follow-up.
-            - Frame questions around the \"why\" and \"how\" aspects.
+            - Frame questions around the "why" and "how" aspects.
             - Ask for additional examples, if necessary.
             - Thank the instructor in a proper and considerate manner.
 
