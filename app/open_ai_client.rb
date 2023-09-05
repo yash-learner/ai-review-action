@@ -1,11 +1,18 @@
 require 'openai'
+require 'json'
 
 class OpenAIClient
   def initialize
     @client = OpenAI::Client.new
     @model = ENV.fetch('OPEN_AI_MODEL', "gpt-3.5-turbo")
     @temperature = ENV.fetch('OPEN_AI_TEMPERATURE', 0.1)
-    @system_prompt = ENV.fetch('SYSTEM_PROMPT', system_prompt_default)
+
+    prompts = JSON.parse(File.read('prompts.json'))
+    @role_prompt = prompts.fetch("ROLE_PROMPT", default_role_prompt)
+    @user_prompt = prompts.fetch("USER_PROMPT", default_user_prompt)
+    @input_description = prompts.fetch("INPUT_DESCRIPTION", default_input_prompt)
+    @output_description = prompts.fetch("OUTPUT_DESCRIPTION", default_output_prompt)
+    @system_prompt = prompts.fetch('SYSTEM_PROMPT', system_prompt_default)
   end
 
   def ask
@@ -28,22 +35,18 @@ class OpenAIClient
 
   def prompt
     @system_prompt
-    .gsub("${ROLE_PROMPT}", default_role_prompt)
-    .gsub("${INPUT_DESCRIPTION}", default_input_prompt)
-    .gsub("${USER_PROMPT}", default_user_prompt)
     .gsub("${SUBMISSION}", "#{Submission.new.checklist}")
-    .gsub("${OUTPUT_DESCRIPTION}", default_output_prompt)
   end
 
   def system_prompt_default
 <<-SYSTEM_PROMPT
-#{ENV.fetch("ROLE_PROMPT", "${ROLE_PROMPT}")}
+#{@role_prompt}
 
-#{ENV.fetch("INPUT_DESCRIPTION", "${INPUT_DESCRIPTION}")}
+#{@input_description}
 
-#{ENV.fetch("USER_PROMPT", "${USER_PROMPT}")}
+#{@user_prompt}
 
-#{ENV.fetch("OUTPUT_DESCRIPTION", "${OUTPUT_DESCRIPTION}")}
+#{@output_description}
 SYSTEM_PROMPT
   end
 
