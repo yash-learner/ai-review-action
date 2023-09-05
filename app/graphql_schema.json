@@ -17,7 +17,9 @@
             {
               "name": "email",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -33,7 +35,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -49,7 +53,9 @@
             {
               "name": "name",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -65,7 +71,9 @@
             {
               "name": "tags",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -88,7 +96,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -100,7 +110,9 @@
             {
               "name": "edges",
               "description": "A list of edges.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "LIST",
                 "name": null,
@@ -116,7 +128,9 @@
             {
               "name": "nodes",
               "description": "A list of nodes.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -140,7 +154,9 @@
             {
               "name": "pageInfo",
               "description": "Information to aid in pagination.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -156,7 +172,9 @@
             {
               "name": "totalCount",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -171,7 +189,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -183,7 +203,9 @@
             {
               "name": "cursor",
               "description": "A cursor for use in pagination.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -199,7 +221,9 @@
             {
               "name": "node",
               "description": "The item at the end of the edge.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "Applicant",
@@ -210,7 +234,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -251,7 +277,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -266,7 +294,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -278,7 +308,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -293,7 +325,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -305,7 +339,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -320,7 +356,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -332,7 +370,9 @@
             {
               "name": "reviewer",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -347,7 +387,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -359,7 +401,9 @@
             {
               "name": "filename",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -375,7 +419,9 @@
             {
               "name": "title",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -391,7 +437,9 @@
             {
               "name": "url",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -406,7 +454,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -418,7 +468,9 @@
             {
               "name": "submission",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "Submission",
@@ -429,7 +481,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -441,7 +495,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -456,7 +512,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -478,7 +536,9 @@
             {
               "name": "active",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -494,7 +554,9 @@
             {
               "name": "course",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -510,7 +572,9 @@
             {
               "name": "createdAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -526,7 +590,9 @@
             {
               "name": "fontSize",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -542,7 +608,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -558,7 +626,9 @@
             {
               "name": "margin",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -574,7 +644,9 @@
             {
               "name": "name",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -590,7 +662,9 @@
             {
               "name": "nameOffsetTop",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -606,7 +680,9 @@
             {
               "name": "qrCorner",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -622,7 +698,9 @@
             {
               "name": "qrScale",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -638,7 +716,9 @@
             {
               "name": "updatedAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -653,7 +733,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -665,7 +747,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -680,7 +764,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -692,7 +778,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -707,7 +795,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -760,7 +850,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -817,7 +909,9 @@
             {
               "name": "user",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -832,7 +926,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -844,7 +940,9 @@
             {
               "name": "author",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "User",
@@ -856,7 +954,9 @@
             {
               "name": "createdAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -872,7 +972,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -888,7 +990,9 @@
             {
               "name": "note",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -903,7 +1007,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -915,7 +1021,9 @@
             {
               "name": "pendingSubmissions",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -931,7 +1039,9 @@
             {
               "name": "reviewedSubmissions",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -946,7 +1056,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -958,7 +1070,9 @@
             {
               "name": "coachesCount",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -974,7 +1088,9 @@
             {
               "name": "course",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -990,7 +1106,9 @@
             {
               "name": "courseId",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1006,7 +1124,9 @@
             {
               "name": "description",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -1018,7 +1138,9 @@
             {
               "name": "endsAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ISO8601DateTime",
@@ -1030,7 +1152,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1046,7 +1170,9 @@
             {
               "name": "name",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1062,7 +1188,9 @@
             {
               "name": "studentsCount",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1077,7 +1205,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -1089,7 +1219,9 @@
             {
               "name": "edges",
               "description": "A list of edges.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "LIST",
                 "name": null,
@@ -1105,7 +1237,9 @@
             {
               "name": "nodes",
               "description": "A list of nodes.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1129,7 +1263,9 @@
             {
               "name": "pageInfo",
               "description": "Information to aid in pagination.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1145,7 +1281,9 @@
             {
               "name": "totalCount",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1160,7 +1298,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -1172,7 +1312,9 @@
             {
               "name": "cursor",
               "description": "A cursor for use in pagination.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1188,7 +1330,9 @@
             {
               "name": "node",
               "description": "The item at the end of the edge.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "Cohort",
@@ -1199,7 +1343,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -1277,7 +1423,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1292,7 +1440,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -1340,7 +1490,9 @@
             {
               "name": "blockType",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1356,7 +1508,9 @@
             {
               "name": "content",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1372,7 +1526,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1388,7 +1544,9 @@
             {
               "name": "sortIndex",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1403,7 +1561,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -1415,7 +1575,9 @@
             {
               "name": "about",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -1427,7 +1589,9 @@
             {
               "name": "archivedAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ISO8601DateTime",
@@ -1439,7 +1603,9 @@
             {
               "name": "certificates",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1463,7 +1629,9 @@
             {
               "name": "coaches",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1487,7 +1655,9 @@
             {
               "name": "coachesCount",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1503,7 +1673,9 @@
             {
               "name": "cohorts",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1527,7 +1699,9 @@
             {
               "name": "cohortsCount",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1543,7 +1717,9 @@
             {
               "name": "cover",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "Image",
@@ -1555,7 +1731,9 @@
             {
               "name": "defaultCohort",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "Cohort",
@@ -1567,7 +1745,9 @@
             {
               "name": "description",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1583,7 +1763,9 @@
             {
               "name": "enableLeaderboard",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1599,7 +1781,9 @@
             {
               "name": "featured",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1615,7 +1799,9 @@
             {
               "name": "highlights",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1639,7 +1825,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1655,7 +1843,9 @@
             {
               "name": "levels",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1679,7 +1869,9 @@
             {
               "name": "levelsCount",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1695,7 +1887,9 @@
             {
               "name": "name",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1711,7 +1905,9 @@
             {
               "name": "processingUrl",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -1723,7 +1919,9 @@
             {
               "name": "progressionLimit",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1739,7 +1937,9 @@
             {
               "name": "publicPreview",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1755,7 +1955,9 @@
             {
               "name": "publicSignup",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1771,7 +1973,9 @@
             {
               "name": "studentTags",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1795,7 +1999,9 @@
             {
               "name": "thumbnail",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "Image",
@@ -1806,7 +2012,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -1818,7 +2026,9 @@
             {
               "name": "edges",
               "description": "A list of edges.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "LIST",
                 "name": null,
@@ -1834,7 +2044,9 @@
             {
               "name": "nodes",
               "description": "A list of nodes.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1858,7 +2070,9 @@
             {
               "name": "pageInfo",
               "description": "Information to aid in pagination.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1874,7 +2088,9 @@
             {
               "name": "totalCount",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1889,7 +2105,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -1901,7 +2119,9 @@
             {
               "name": "cursor",
               "description": "A cursor for use in pagination.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1917,7 +2137,9 @@
             {
               "name": "node",
               "description": "The item at the end of the edge.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "Course",
@@ -1928,7 +2150,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -1940,7 +2164,9 @@
             {
               "name": "cohorts",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1964,7 +2190,9 @@
             {
               "name": "createdAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1980,7 +2208,9 @@
             {
               "name": "exportType",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -1996,7 +2226,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -2012,7 +2244,9 @@
             {
               "name": "includeInactiveStudents",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -2028,7 +2262,9 @@
             {
               "name": "reviewedOnly",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -2044,7 +2280,9 @@
             {
               "name": "tags",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -2067,7 +2305,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2079,7 +2319,9 @@
             {
               "name": "description",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -2095,7 +2337,9 @@
             {
               "name": "icon",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -2111,7 +2355,9 @@
             {
               "name": "title",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -2126,7 +2372,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2232,7 +2480,9 @@
             {
               "name": "resource",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -2248,7 +2498,9 @@
             {
               "name": "values",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -2271,7 +2523,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2312,7 +2566,9 @@
             {
               "name": "coachNote",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "CoachNote",
@@ -2323,7 +2579,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2335,7 +2593,9 @@
             {
               "name": "cohort",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "Cohort",
@@ -2346,7 +2606,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2358,7 +2620,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -2369,7 +2633,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2381,7 +2647,9 @@
             {
               "name": "courseAuthor",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "UserProxy",
@@ -2392,7 +2660,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2404,7 +2674,9 @@
             {
               "name": "courseExport",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "CourseExport",
@@ -2415,7 +2687,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2427,7 +2701,9 @@
             {
               "name": "course",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "Course",
@@ -2438,7 +2714,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2450,7 +2728,9 @@
             {
               "name": "contentBlock",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "ContentBlock",
@@ -2461,7 +2741,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2473,7 +2755,9 @@
             {
               "name": "evaluationCriterion",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "EvaluationCriterion",
@@ -2484,7 +2768,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2496,7 +2782,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -2511,7 +2799,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2523,7 +2813,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -2538,7 +2830,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2550,7 +2844,9 @@
             {
               "name": "contentBlock",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "ContentBlock",
@@ -2561,7 +2857,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2573,7 +2871,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -2588,7 +2888,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2600,7 +2902,9 @@
             {
               "name": "postId",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ID",
@@ -2611,7 +2915,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2623,7 +2929,9 @@
             {
               "name": "submission",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "Submission",
@@ -2634,7 +2942,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2646,7 +2956,9 @@
             {
               "name": "schoolAdmin",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "UserProxy",
@@ -2657,7 +2969,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2669,7 +2983,9 @@
             {
               "name": "schoolLink",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "SchoolLink",
@@ -2680,7 +2996,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2692,7 +3010,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -2707,7 +3027,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2719,7 +3041,9 @@
             {
               "name": "studentIds",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "LIST",
                 "name": null,
@@ -2738,7 +3062,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2750,7 +3076,9 @@
             {
               "name": "submission",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "Submission",
@@ -2761,7 +3089,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2773,7 +3103,9 @@
             {
               "name": "contentBlockId",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -2789,7 +3121,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -2805,7 +3139,9 @@
             {
               "name": "sampleContent",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -2820,7 +3156,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2832,7 +3170,9 @@
             {
               "name": "target",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "CreateTarget",
@@ -2843,7 +3183,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2855,7 +3197,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -2870,7 +3214,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2882,7 +3228,9 @@
             {
               "name": "team",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "Team",
@@ -2893,7 +3241,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2905,7 +3255,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ID",
@@ -2916,7 +3268,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2928,7 +3282,9 @@
             {
               "name": "topicId",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ID",
@@ -2939,7 +3295,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2951,7 +3309,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -2966,7 +3326,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -2978,7 +3340,9 @@
             {
               "name": "vimeoVideo",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "VimeoVideo",
@@ -2989,7 +3353,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3001,7 +3367,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3016,7 +3384,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3028,7 +3398,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3043,7 +3415,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3055,7 +3429,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3070,7 +3446,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3082,7 +3460,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3097,7 +3477,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3109,7 +3491,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3124,7 +3508,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3136,7 +3522,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3151,7 +3539,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3163,7 +3553,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3178,7 +3570,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3190,7 +3584,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3205,7 +3601,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3217,7 +3615,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3232,7 +3632,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3244,7 +3646,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3259,7 +3663,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3271,7 +3677,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3286,7 +3694,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3298,7 +3708,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3313,7 +3725,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3325,7 +3739,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3340,7 +3756,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3352,7 +3770,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3367,7 +3787,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3379,7 +3801,9 @@
             {
               "name": "embedCode",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -3391,7 +3815,9 @@
             {
               "name": "lastResolvedAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -3403,7 +3829,9 @@
             {
               "name": "requestSource",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3419,7 +3847,9 @@
             {
               "name": "url",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3434,7 +3864,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3469,7 +3901,9 @@
             {
               "name": "gradeLabels",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3493,7 +3927,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3509,7 +3945,9 @@
             {
               "name": "maxGrade",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3525,7 +3963,9 @@
             {
               "name": "name",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3541,7 +3981,9 @@
             {
               "name": "passGrade",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3556,7 +3998,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3568,7 +4012,9 @@
             {
               "name": "averageGrade",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3584,7 +4030,9 @@
             {
               "name": "evaluationCriterionId",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3599,7 +4047,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3634,7 +4084,9 @@
             {
               "name": "filename",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3650,7 +4102,9 @@
             {
               "name": "title",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3666,7 +4120,9 @@
             {
               "name": "url",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3681,7 +4137,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3703,7 +4161,9 @@
             {
               "name": "evaluationCriterionId",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3719,7 +4179,9 @@
             {
               "name": "grade",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3734,7 +4196,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3746,7 +4210,9 @@
             {
               "name": "grade",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3762,7 +4228,9 @@
             {
               "name": "label",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3777,7 +4245,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3895,7 +4365,9 @@
             {
               "name": "filename",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3911,7 +4383,9 @@
             {
               "name": "url",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3926,7 +4400,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -3938,7 +4414,9 @@
             {
               "name": "caption",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3954,7 +4432,9 @@
             {
               "name": "filename",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3970,7 +4450,9 @@
             {
               "name": "url",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -3986,7 +4468,9 @@
             {
               "name": "width",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4001,7 +4485,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -4054,7 +4540,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4069,7 +4557,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -4081,7 +4571,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4096,7 +4588,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -4118,7 +4612,9 @@
             {
               "name": "issuedCertificate",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "IssuedCertificate",
@@ -4129,7 +4625,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -4141,7 +4639,9 @@
             {
               "name": "certificate",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4157,7 +4657,9 @@
             {
               "name": "createdAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4173,7 +4675,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4189,7 +4693,9 @@
             {
               "name": "issuedBy",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4205,7 +4711,9 @@
             {
               "name": "name",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4221,7 +4729,9 @@
             {
               "name": "revokedAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ISO8601DateTime",
@@ -4233,7 +4743,9 @@
             {
               "name": "revokedBy",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -4245,7 +4757,9 @@
             {
               "name": "serialNumber",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4261,7 +4775,9 @@
             {
               "name": "updatedAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4277,7 +4793,9 @@
             {
               "name": "user",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4292,7 +4810,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -4314,7 +4834,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4330,7 +4852,9 @@
             {
               "name": "name",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4346,7 +4870,9 @@
             {
               "name": "number",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4361,7 +4887,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -4373,7 +4901,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4388,7 +4918,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -4400,7 +4932,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4415,7 +4949,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -4427,7 +4963,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4442,7 +4980,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -4454,7 +4994,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4469,7 +5011,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -4481,7 +5025,9 @@
             {
               "name": "markdown",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4496,7 +5042,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -4508,7 +5056,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4523,7 +5073,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -4535,7 +5087,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4550,7 +5104,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -4562,7 +5118,9 @@
             {
               "name": "completed",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4578,7 +5136,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4594,7 +5154,9 @@
             {
               "name": "milestoneNumber",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4610,7 +5172,9 @@
             {
               "name": "title",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4625,7 +5189,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -4637,7 +5203,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4652,7 +5220,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -4687,7 +5257,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4702,7 +5274,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -7327,7 +7901,9 @@
             {
               "name": "deleteWebPushSubscription",
               "description": "Delete web push subscription",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -7586,7 +8162,9 @@
             {
               "name": "markAllNotifications",
               "description": "Mark all notifications as read",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -10154,7 +10732,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -10166,7 +10746,9 @@
             {
               "name": "actor",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "User",
@@ -10178,7 +10760,9 @@
             {
               "name": "createdAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -10194,7 +10778,9 @@
             {
               "name": "event",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -10210,7 +10796,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -10226,7 +10814,9 @@
             {
               "name": "message",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -10242,7 +10832,9 @@
             {
               "name": "notifiableId",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ID",
@@ -10254,7 +10846,9 @@
             {
               "name": "notifiableType",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ID",
@@ -10266,7 +10860,9 @@
             {
               "name": "readAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ISO8601DateTime",
@@ -10277,7 +10873,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -10289,7 +10887,9 @@
             {
               "name": "edges",
               "description": "A list of edges.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "LIST",
                 "name": null,
@@ -10305,7 +10905,9 @@
             {
               "name": "nodes",
               "description": "A list of nodes.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -10329,7 +10931,9 @@
             {
               "name": "pageInfo",
               "description": "Information to aid in pagination.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -10345,7 +10949,9 @@
             {
               "name": "totalCount",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -10360,7 +10966,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -10372,7 +10980,9 @@
             {
               "name": "cursor",
               "description": "A cursor for use in pagination.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -10388,7 +10998,9 @@
             {
               "name": "node",
               "description": "The item at the end of the edge.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "Notification",
@@ -10399,7 +11011,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -10457,7 +11071,9 @@
             {
               "name": "endCursor",
               "description": "When paginating forwards, the cursor to continue.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -10469,7 +11085,9 @@
             {
               "name": "hasNextPage",
               "description": "When paginating forwards, are there more items?",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -10485,7 +11103,9 @@
             {
               "name": "hasPreviousPage",
               "description": "When paginating backwards, are there more items?",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -10501,7 +11121,9 @@
             {
               "name": "startCursor",
               "description": "When paginating backwards, the cursor to continue.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -10512,7 +11134,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -11696,7 +12320,9 @@
             {
               "name": "schoolStats",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -12624,7 +13250,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -12636,7 +13264,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -12651,7 +13281,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -12663,7 +13295,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -12678,7 +13312,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -12690,7 +13326,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -12705,7 +13343,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -12717,7 +13357,9 @@
             {
               "name": "reviewer",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -12732,7 +13374,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -12744,7 +13388,9 @@
             {
               "name": "embedCode",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -12755,7 +13401,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -12767,7 +13415,9 @@
             {
               "name": "result",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -12791,7 +13441,9 @@
             {
               "name": "title",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -12806,7 +13458,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -12818,7 +13472,9 @@
             {
               "name": "feedback",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -12830,7 +13486,9 @@
             {
               "name": "title",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -12845,7 +13503,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -12857,7 +13517,9 @@
             {
               "name": "assignedAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -12873,7 +13535,9 @@
             {
               "name": "user",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -12888,7 +13552,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -12900,7 +13566,9 @@
             {
               "name": "assignedAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -12916,7 +13584,9 @@
             {
               "name": "name",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -12931,7 +13601,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -12943,7 +13615,9 @@
             {
               "name": "revokedCertificate",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "IssuedCertificate",
@@ -12954,7 +13628,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -12966,7 +13642,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -12982,7 +13660,9 @@
             {
               "name": "kind",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -12998,7 +13678,9 @@
             {
               "name": "sortIndex",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13014,7 +13696,9 @@
             {
               "name": "title",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -13026,7 +13710,9 @@
             {
               "name": "url",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13041,7 +13727,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -13053,7 +13741,9 @@
             {
               "name": "coachesCount",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13069,7 +13759,9 @@
             {
               "name": "studentsCount",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13084,7 +13776,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -13096,7 +13790,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13111,7 +13807,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -13123,7 +13821,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13138,7 +13838,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -13183,7 +13885,9 @@
             {
               "name": "cohort",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13199,7 +13903,9 @@
             {
               "name": "course",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13215,7 +13921,9 @@
             {
               "name": "droppedOutAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ISO8601DateTime",
@@ -13227,7 +13935,9 @@
             {
               "name": "githubRepository",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -13239,7 +13949,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13255,7 +13967,9 @@
             {
               "name": "issuedCertificates",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13279,7 +13993,9 @@
             {
               "name": "personalCoaches",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13303,7 +14019,9 @@
             {
               "name": "taggings",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13327,7 +14045,9 @@
             {
               "name": "user",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13342,7 +14062,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -13354,7 +14076,9 @@
             {
               "name": "edges",
               "description": "A list of edges.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "LIST",
                 "name": null,
@@ -13370,7 +14094,9 @@
             {
               "name": "nodes",
               "description": "A list of nodes.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13394,7 +14120,9 @@
             {
               "name": "pageInfo",
               "description": "Information to aid in pagination.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13410,7 +14138,9 @@
             {
               "name": "totalCount",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13425,7 +14155,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -13437,7 +14169,9 @@
             {
               "name": "averageGrades",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13461,7 +14195,9 @@
             {
               "name": "email",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13477,7 +14213,9 @@
             {
               "name": "evaluationCriteria",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13501,7 +14239,9 @@
             {
               "name": "milestoneTargetsCompletionStatus",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13525,7 +14265,9 @@
             {
               "name": "quizScores",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13549,7 +14291,9 @@
             {
               "name": "student",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13565,7 +14309,9 @@
             {
               "name": "targetsCompleted",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13581,7 +14327,9 @@
             {
               "name": "targetsPendingReview",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13597,7 +14345,9 @@
             {
               "name": "team",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "Team",
@@ -13609,7 +14359,9 @@
             {
               "name": "totalTargets",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13624,7 +14376,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -13636,7 +14390,9 @@
             {
               "name": "cursor",
               "description": "A cursor for use in pagination.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13652,7 +14408,9 @@
             {
               "name": "node",
               "description": "The item at the end of the edge.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "Student",
@@ -13663,7 +14421,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -13778,7 +14538,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13794,7 +14556,9 @@
             {
               "name": "name",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13809,7 +14573,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -13821,7 +14587,9 @@
             {
               "name": "createdAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13837,7 +14605,9 @@
             {
               "name": "evaluatedAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ISO8601DateTime",
@@ -13849,7 +14619,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13865,7 +14637,9 @@
             {
               "name": "milestoneNumber",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "Int",
@@ -13877,7 +14651,9 @@
             {
               "name": "passedAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ISO8601DateTime",
@@ -13889,7 +14665,9 @@
             {
               "name": "studentIds",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13913,7 +14691,9 @@
             {
               "name": "targetId",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13929,7 +14709,9 @@
             {
               "name": "teamTarget",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13945,7 +14727,9 @@
             {
               "name": "title",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -13960,7 +14744,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -13972,7 +14758,9 @@
             {
               "name": "edges",
               "description": "A list of edges.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "LIST",
                 "name": null,
@@ -13988,7 +14776,9 @@
             {
               "name": "nodes",
               "description": "A list of nodes.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14012,7 +14802,9 @@
             {
               "name": "pageInfo",
               "description": "Information to aid in pagination.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14028,7 +14820,9 @@
             {
               "name": "totalCount",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14043,7 +14837,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -14055,7 +14851,9 @@
             {
               "name": "cursor",
               "description": "A cursor for use in pagination.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14071,7 +14869,9 @@
             {
               "name": "node",
               "description": "The item at the end of the edge.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "StudentSubmission",
@@ -14082,7 +14882,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -14094,7 +14896,9 @@
             {
               "name": "archivedAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ISO8601DateTime",
@@ -14106,7 +14910,9 @@
             {
               "name": "checklist",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14122,7 +14928,9 @@
             {
               "name": "createdAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14138,7 +14946,9 @@
             {
               "name": "evaluatedAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ISO8601DateTime",
@@ -14150,7 +14960,9 @@
             {
               "name": "evaluatorName",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -14162,7 +14974,9 @@
             {
               "name": "feedback",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14186,7 +15000,9 @@
             {
               "name": "feedbackSent",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14202,7 +15018,9 @@
             {
               "name": "files",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14226,7 +15044,9 @@
             {
               "name": "grades",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14250,7 +15070,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14266,7 +15088,9 @@
             {
               "name": "levelId",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14282,7 +15106,9 @@
             {
               "name": "levelNumber",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14298,7 +15124,9 @@
             {
               "name": "passedAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ISO8601DateTime",
@@ -14310,7 +15138,9 @@
             {
               "name": "targetId",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14326,7 +15156,9 @@
             {
               "name": "teamName",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -14338,7 +15170,9 @@
             {
               "name": "title",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14354,7 +15188,9 @@
             {
               "name": "userNames",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14369,7 +15205,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -14381,7 +15219,9 @@
             {
               "name": "allSubmissions",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14405,7 +15245,9 @@
             {
               "name": "coaches",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14429,7 +15271,9 @@
             {
               "name": "courseId",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14445,7 +15289,9 @@
             {
               "name": "createdAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14461,7 +15307,9 @@
             {
               "name": "evaluationCriteria",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14485,7 +15333,9 @@
             {
               "name": "inactiveStudents",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14501,7 +15351,9 @@
             {
               "name": "inactiveSubmissionReviewAllowedDays",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14517,7 +15369,9 @@
             {
               "name": "preview",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14533,7 +15387,9 @@
             {
               "name": "reviewChecklist",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14557,7 +15413,9 @@
             {
               "name": "reviewerDetails",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "ReviewerDetail",
@@ -14569,7 +15427,9 @@
             {
               "name": "students",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14593,7 +15453,9 @@
             {
               "name": "submission",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14609,7 +15471,9 @@
             {
               "name": "submissionReportPollTime",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14625,7 +15489,9 @@
             {
               "name": "submissionReports",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14649,7 +15515,9 @@
             {
               "name": "targetEvaluationCriteriaIds",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14673,7 +15541,9 @@
             {
               "name": "targetId",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14689,7 +15559,9 @@
             {
               "name": "targetTitle",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14705,7 +15577,9 @@
             {
               "name": "teamName",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -14716,7 +15590,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -14728,7 +15604,9 @@
             {
               "name": "coachAvatarUrl",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -14740,7 +15618,9 @@
             {
               "name": "coachName",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -14752,7 +15632,9 @@
             {
               "name": "coachTitle",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14768,7 +15650,9 @@
             {
               "name": "createdAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14784,7 +15668,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14800,7 +15686,9 @@
             {
               "name": "value",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14815,7 +15703,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -14827,7 +15717,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14843,7 +15735,9 @@
             {
               "name": "title",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14859,7 +15753,9 @@
             {
               "name": "url",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14874,7 +15770,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -14886,7 +15784,9 @@
             {
               "name": "archivedAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ISO8601DateTime",
@@ -14898,7 +15798,9 @@
             {
               "name": "createdAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14914,7 +15816,9 @@
             {
               "name": "evaluatedAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ISO8601DateTime",
@@ -14926,7 +15830,9 @@
             {
               "name": "feedbackSent",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14942,7 +15848,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -14958,7 +15866,9 @@
             {
               "name": "milestoneNumber",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "Int",
@@ -14970,7 +15880,9 @@
             {
               "name": "passedAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ISO8601DateTime",
@@ -14982,7 +15894,9 @@
             {
               "name": "reviewer",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "ReviewerDetailInfo",
@@ -14994,7 +15908,9 @@
             {
               "name": "teamName",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -15006,7 +15922,9 @@
             {
               "name": "title",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15022,7 +15940,9 @@
             {
               "name": "userNames",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15037,7 +15957,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -15049,7 +15971,9 @@
             {
               "name": "edges",
               "description": "A list of edges.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "LIST",
                 "name": null,
@@ -15065,7 +15989,9 @@
             {
               "name": "nodes",
               "description": "A list of nodes.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15089,7 +16015,9 @@
             {
               "name": "pageInfo",
               "description": "Information to aid in pagination.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15105,7 +16033,9 @@
             {
               "name": "totalCount",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15120,7 +16050,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -15132,7 +16064,9 @@
             {
               "name": "cursor",
               "description": "A cursor for use in pagination.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15148,7 +16082,9 @@
             {
               "name": "node",
               "description": "The item at the end of the edge.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "SubmissionInfo",
@@ -15159,7 +16095,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -15171,7 +16109,9 @@
             {
               "name": "completedAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ISO8601DateTime",
@@ -15183,7 +16123,9 @@
             {
               "name": "heading",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -15195,7 +16137,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15211,7 +16155,9 @@
             {
               "name": "queuedAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15227,7 +16173,9 @@
             {
               "name": "report",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -15239,7 +16187,9 @@
             {
               "name": "reporter",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15255,7 +16205,9 @@
             {
               "name": "startedAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ISO8601DateTime",
@@ -15267,7 +16219,9 @@
             {
               "name": "status",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15283,7 +16237,9 @@
             {
               "name": "targetUrl",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -15294,7 +16250,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -15422,7 +16380,9 @@
             {
               "name": "checklist",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15438,7 +16398,9 @@
             {
               "name": "completionInstructions",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -15450,7 +16412,9 @@
             {
               "name": "evaluationCriteria",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15474,7 +16438,9 @@
             {
               "name": "linkToComplete",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -15486,7 +16452,9 @@
             {
               "name": "milestone",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15502,7 +16470,9 @@
             {
               "name": "prerequisiteTargets",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15526,7 +16496,9 @@
             {
               "name": "quiz",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15550,7 +16522,9 @@
             {
               "name": "role",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15566,7 +16540,9 @@
             {
               "name": "targetGroupId",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15582,7 +16558,9 @@
             {
               "name": "title",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15598,7 +16576,9 @@
             {
               "name": "visibility",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15613,7 +16593,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -15625,7 +16607,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15641,7 +16625,9 @@
             {
               "name": "milestoneNumber",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "Int",
@@ -15653,7 +16639,9 @@
             {
               "name": "title",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15668,7 +16656,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -15680,7 +16670,9 @@
             {
               "name": "answerOptions",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15704,7 +16696,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15720,7 +16714,9 @@
             {
               "name": "question",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15735,7 +16731,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -15747,7 +16745,9 @@
             {
               "name": "answer",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15763,7 +16763,9 @@
             {
               "name": "correctAnswer",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15779,7 +16781,9 @@
             {
               "name": "hint",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -15791,7 +16795,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15806,7 +16812,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -15912,7 +16920,9 @@
             {
               "name": "createdAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15928,7 +16938,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15944,7 +16956,9 @@
             {
               "name": "updatedAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15959,7 +16973,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -15971,7 +16987,9 @@
             {
               "name": "cohort",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -15987,7 +17005,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16003,7 +17023,9 @@
             {
               "name": "name",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16019,7 +17041,9 @@
             {
               "name": "students",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16042,7 +17066,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16054,7 +17080,9 @@
             {
               "name": "edges",
               "description": "A list of edges.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "LIST",
                 "name": null,
@@ -16070,7 +17098,9 @@
             {
               "name": "nodes",
               "description": "A list of nodes.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16094,7 +17124,9 @@
             {
               "name": "pageInfo",
               "description": "Information to aid in pagination.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16110,7 +17142,9 @@
             {
               "name": "totalCount",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16125,7 +17159,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16137,7 +17173,9 @@
             {
               "name": "cursor",
               "description": "A cursor for use in pagination.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16153,7 +17191,9 @@
             {
               "name": "node",
               "description": "The item at the end of the edge.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "Team",
@@ -16164,7 +17204,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16176,7 +17218,9 @@
             {
               "name": "createdAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16192,7 +17236,9 @@
             {
               "name": "creator",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "User",
@@ -16204,7 +17250,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16220,7 +17268,9 @@
             {
               "name": "lastActivityAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ISO8601DateTime",
@@ -16232,7 +17282,9 @@
             {
               "name": "likesCount",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16248,7 +17300,9 @@
             {
               "name": "liveRepliesCount",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16264,7 +17318,9 @@
             {
               "name": "participants",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16288,7 +17344,9 @@
             {
               "name": "participantsCount",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16304,7 +17362,9 @@
             {
               "name": "solved",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16320,7 +17380,9 @@
             {
               "name": "title",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16336,7 +17398,9 @@
             {
               "name": "topicCategoryId",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ID",
@@ -16348,7 +17412,9 @@
             {
               "name": "views",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16363,7 +17429,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16375,7 +17443,9 @@
             {
               "name": "edges",
               "description": "A list of edges.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "LIST",
                 "name": null,
@@ -16391,7 +17461,9 @@
             {
               "name": "nodes",
               "description": "A list of nodes.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16415,7 +17487,9 @@
             {
               "name": "pageInfo",
               "description": "Information to aid in pagination.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16431,7 +17505,9 @@
             {
               "name": "totalCount",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16446,7 +17522,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16458,7 +17536,9 @@
             {
               "name": "cursor",
               "description": "A cursor for use in pagination.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16474,7 +17554,9 @@
             {
               "name": "node",
               "description": "The item at the end of the edge.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "Topic",
@@ -16485,7 +17567,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16555,7 +17639,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16570,7 +17656,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16582,7 +17670,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16597,7 +17687,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16609,7 +17701,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16624,7 +17718,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16636,7 +17732,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16651,7 +17749,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16663,7 +17763,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16678,7 +17780,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16690,7 +17794,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16705,7 +17811,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16717,7 +17825,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16732,7 +17842,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16744,7 +17856,9 @@
             {
               "name": "cohort",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "Cohort",
@@ -16755,7 +17869,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16796,7 +17912,9 @@
             {
               "name": "communityId",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ID",
@@ -16808,7 +17926,9 @@
             {
               "name": "errors",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "LIST",
                 "name": null,
@@ -16827,7 +17947,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16839,7 +17961,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16854,7 +17978,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16866,7 +17992,9 @@
             {
               "name": "course",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "Course",
@@ -16877,7 +18005,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16889,7 +18019,9 @@
             {
               "name": "evaluationCriterion",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "EvaluationCriterion",
@@ -16900,7 +18032,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16912,7 +18046,9 @@
             {
               "name": "contentBlock",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "ContentBlock",
@@ -16923,7 +18059,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16935,7 +18073,9 @@
             {
               "name": "contentBlock",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "ContentBlock",
@@ -16946,7 +18086,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16958,7 +18100,9 @@
             {
               "name": "contentBlock",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "ContentBlock",
@@ -16969,7 +18113,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16981,7 +18127,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -16996,7 +18144,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -17008,7 +18158,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17023,7 +18175,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -17035,7 +18189,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17050,7 +18206,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -17062,7 +18220,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17077,7 +18237,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -17089,7 +18251,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17104,7 +18268,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -17145,7 +18311,9 @@
             {
               "name": "errors",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17168,7 +18336,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -17180,7 +18350,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17195,7 +18367,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -17207,7 +18381,9 @@
             {
               "name": "sortIndex",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "Int",
@@ -17218,7 +18394,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -17230,7 +18408,9 @@
             {
               "name": "team",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "Team",
@@ -17241,7 +18421,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -17253,7 +18435,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17268,7 +18452,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -17280,7 +18466,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17295,7 +18483,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -17307,7 +18497,9 @@
             {
               "name": "success",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17322,7 +18514,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -17334,7 +18528,9 @@
             {
               "name": "affiliation",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -17346,7 +18542,9 @@
             {
               "name": "avatarUrl",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -17358,7 +18556,9 @@
             {
               "name": "email",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17374,7 +18574,9 @@
             {
               "name": "fullTitle",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17390,7 +18592,9 @@
             {
               "name": "id",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17406,7 +18610,9 @@
             {
               "name": "lastSeenAt",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "ISO8601DateTime",
@@ -17418,7 +18624,9 @@
             {
               "name": "name",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17434,7 +18642,9 @@
             {
               "name": "preferredName",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -17446,7 +18656,9 @@
             {
               "name": "taggings",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17470,7 +18682,9 @@
             {
               "name": "title",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17485,7 +18699,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -17497,7 +18713,9 @@
             {
               "name": "avatarUrl",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -17509,7 +18727,9 @@
             {
               "name": "fullTitle",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17525,7 +18745,9 @@
             {
               "name": "id",
               "description": "The ID returned by the type can represent different user role types",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17541,7 +18763,9 @@
             {
               "name": "name",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17557,7 +18781,9 @@
             {
               "name": "preferredName",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -17569,7 +18795,9 @@
             {
               "name": "userId",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17584,7 +18812,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -17596,7 +18826,9 @@
             {
               "name": "link",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17612,7 +18844,9 @@
             {
               "name": "uploadLink",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17627,7 +18861,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -17676,7 +18912,9 @@
             {
               "name": "description",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -17688,7 +18926,9 @@
             {
               "name": "isRepeatable",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "Boolean",
@@ -17700,7 +18940,9 @@
             {
               "name": "locations",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17724,7 +18966,9 @@
             {
               "name": "name",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17740,7 +18984,9 @@
             {
               "name": "onField",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17756,7 +19002,9 @@
             {
               "name": "onFragment",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17772,7 +19020,9 @@
             {
               "name": "onOperation",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17787,7 +19037,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -17924,7 +19176,9 @@
             {
               "name": "deprecationReason",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -17936,7 +19190,9 @@
             {
               "name": "description",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -17948,7 +19204,9 @@
             {
               "name": "isDeprecated",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17964,7 +19222,9 @@
             {
               "name": "name",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -17979,7 +19239,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -18028,7 +19290,9 @@
             {
               "name": "deprecationReason",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -18040,7 +19304,9 @@
             {
               "name": "description",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -18052,7 +19318,9 @@
             {
               "name": "isDeprecated",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -18068,7 +19336,9 @@
             {
               "name": "name",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -18084,7 +19354,9 @@
             {
               "name": "type",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -18099,7 +19371,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -18111,7 +19385,9 @@
             {
               "name": "defaultValue",
               "description": "A GraphQL-formatted string representing the default value for this input value.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -18123,7 +19399,9 @@
             {
               "name": "deprecationReason",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -18135,7 +19413,9 @@
             {
               "name": "description",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -18147,7 +19427,9 @@
             {
               "name": "isDeprecated",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -18163,7 +19445,9 @@
             {
               "name": "name",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -18179,7 +19463,9 @@
             {
               "name": "type",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -18194,7 +19480,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -18206,7 +19494,9 @@
             {
               "name": "description",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -18218,7 +19508,9 @@
             {
               "name": "directives",
               "description": "A list of all directives supported by this server.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -18242,7 +19534,9 @@
             {
               "name": "mutationType",
               "description": "If this server supports mutation, the type that mutation operations will be rooted at.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "__Type",
@@ -18254,7 +19548,9 @@
             {
               "name": "queryType",
               "description": "The type that query operations will be rooted at.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -18270,7 +19566,9 @@
             {
               "name": "subscriptionType",
               "description": "If this server support subscription, the type that subscription operations will be rooted at.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "__Type",
@@ -18282,7 +19580,9 @@
             {
               "name": "types",
               "description": "A list of all types supported by this server.",
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -18305,7 +19605,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -18317,7 +19619,9 @@
             {
               "name": "description",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -18428,7 +19732,9 @@
             {
               "name": "interfaces",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "LIST",
                 "name": null,
@@ -18448,7 +19754,9 @@
             {
               "name": "isOneOf",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -18464,7 +19772,9 @@
             {
               "name": "kind",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -18480,7 +19790,9 @@
             {
               "name": "name",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -18492,7 +19804,9 @@
             {
               "name": "ofType",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "OBJECT",
                 "name": "__Type",
@@ -18504,7 +19818,9 @@
             {
               "name": "possibleTypes",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "LIST",
                 "name": null,
@@ -18524,7 +19840,9 @@
             {
               "name": "specifiedByURL",
               "description": null,
-              "args": [],
+              "args": [
+
+              ],
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -18535,7 +19853,9 @@
             }
           ],
           "inputFields": null,
-          "interfaces": [],
+          "interfaces": [
+
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -18603,7 +19923,11 @@
         {
           "name": "include",
           "description": "Directs the executor to include this field or fragment only when the `if` argument is true.",
-          "locations": ["FIELD", "FRAGMENT_SPREAD", "INLINE_FRAGMENT"],
+          "locations": [
+            "FIELD",
+            "FRAGMENT_SPREAD",
+            "INLINE_FRAGMENT"
+          ],
           "args": [
             {
               "name": "if",
@@ -18626,7 +19950,11 @@
         {
           "name": "skip",
           "description": "Directs the executor to skip this field or fragment when the `if` argument is true.",
-          "locations": ["FIELD", "FRAGMENT_SPREAD", "INLINE_FRAGMENT"],
+          "locations": [
+            "FIELD",
+            "FRAGMENT_SPREAD",
+            "INLINE_FRAGMENT"
+          ],
           "args": [
             {
               "name": "if",
@@ -18673,8 +20001,12 @@
         {
           "name": "oneOf",
           "description": "Requires that exactly one field must be supplied and that field must not be `null`.",
-          "locations": ["INPUT_OBJECT"],
-          "args": []
+          "locations": [
+            "INPUT_OBJECT"
+          ],
+          "args": [
+
+          ]
         }
       ]
     }
