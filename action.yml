@@ -1,9 +1,6 @@
 name: 'AI review action'
 description: 'Provides AI-generated feedback on student submissions'
 author: 'Pupilfirst'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
 inputs:
   OPEN_AI_MODEL:
     description: 'OpenAI model used to process requests'
