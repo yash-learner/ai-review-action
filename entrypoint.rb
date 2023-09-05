@@ -14,7 +14,12 @@ end
 def generate_response
     @generate_response ||=
     begin
-        puts "test hello"
+        puts "prompts"
+        prompts = JSON.parse(File.read("#{ENV['GITHUB_ACTION_PATH']}/prompts.json"))
+        puts prompts.inspect
+        test = OpenAIClient,new
+        puts "test"
+        puts test.inspect
         JSON.parse(OpenAIClient.new.ask)
     rescue => exception
         {
