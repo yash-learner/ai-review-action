@@ -35,7 +35,7 @@ class OpenAIClient
 
   def prompt
     @system_prompt
-    .gsub("${SUBMISSION}", "#{Submission.new.checklist}")
+    .gsub("@@SUBMISSION@@", "#{Submission.new.checklist}")
   end
 
   def system_prompt_default
