@@ -14,6 +14,7 @@ end
 def generate_response
     @generate_response ||=
     begin
+        puts "test hello"
         JSON.parse(OpenAIClient.new.ask)
     rescue => exception
         {
