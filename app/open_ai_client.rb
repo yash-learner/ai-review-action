@@ -13,13 +13,9 @@ class OpenAIClient
     @input_description = prompts.fetch("INPUT_DESCRIPTION", default_input_prompt)
     @output_description = prompts.fetch("OUTPUT_DESCRIPTION", default_output_prompt)
     @system_prompt = prompts.fetch('SYSTEM_PROMPT', system_prompt_default)
-
-    puts "Prompts: #{prompts.inspect}"
-    puts "System prompt: #{@system_prompt}"
   end
 
   def ask
-    puts "Prompt: #{prompt}"
     puts prompt
     response = @client.chat(
         parameters: {

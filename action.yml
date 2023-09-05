@@ -76,6 +76,10 @@ runs:
         EOF
       shell: bash
 
+    - name: 'Print the contents of prompts.json'
+      run: cat prompts.json
+      shell: bash
+
     - name: 'Run the ruby script'
       run: ruby  ${{ github.action_path }}/entrypoint.rb
       shell: bash

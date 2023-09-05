@@ -23,6 +23,4 @@ def generate_response
     end
 end
 
-puts JSON.parse(File.read("#{ENV['GITHUB_WORKSPACE']}/prompts.json"))
-
 PupilfirstAPI::Grader.new.grade(generate_response)
