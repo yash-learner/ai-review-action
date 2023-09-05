@@ -56,7 +56,7 @@ runs:
       shell: bash
 
     - name: 'Create JSON prompts file'
-      run: echo "${{ toJSON(inputs) }}" > prompts.json
+      run:  "${{ toJSON(inputs) }}" > prompts.json
       shell: bash
 
     - name: 'Run the ruby script'
