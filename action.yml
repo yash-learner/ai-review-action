@@ -68,5 +68,5 @@ runs:
       shell: bash
 
     - name: 'Run the ruby script'
-      run: ruby ./entrypoint.rb
+      run: ruby entrypoint.rb
       shell: bash
