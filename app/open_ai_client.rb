@@ -32,6 +32,7 @@ class OpenAIClient
 
   def prompt
     user_prompt = Base64.decode64(@config.fetch('USER_PROMPT', default_user_prompt))
+    puts "user_prompt: #{user_prompt}"
     @system_prompt
     .gsub("${ROLE_PROMPT}", default_role_prompt)
     .gsub("${INPUT_DESCRIPTION}", default_input_prompt)
