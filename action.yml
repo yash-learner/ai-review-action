@@ -55,29 +55,22 @@ runs:
         gem install ruby-openai dotenv pry graphql-client
       shell: bash
 
-    - name: 'Escape newlines for JSON compatibility'
-      run: |
-        echo "ROLE_PROMPT_ESCAPED=$(echo -n "${{ inputs.ROLE_PROMPT }}" | sed ':a;N;$!ba;s/\n/\\n/g')" >> $GITHUB_ENV
-        echo "USER_PROMPT_ESCAPED=$(echo -n "${{ inputs.USER_PROMPT }}" | sed ':a;N;$!ba;s/\n/\\n/g')" >> $GITHUB_ENV
-        echo "INPUT_DESCRIPTION_ESCAPED=$(echo -n "${{ inputs.INPUT_DESCRIPTION }}" | sed ':a;N;$!ba;s/\n/\\n/g')" >> $GITHUB_ENV
-        echo "OUTPUT_DESCRIPTION_ESCAPED=$(echo -n "${{ inputs.OUTPUT_DESCRIPTION }}" | sed ':a;N;$!ba;s/\n/\\n/g')" >> $GITHUB_ENV
-      shell: bash
-
-
-    - name: 'Create JSON prompts file'
+    - name: 'Create config.yml'
       run:  |
-        cat <<EOF > prompts.json
+        cat <<EOF > config.yml
         {
-          "ROLE_PROMPT": "$ROLE_PROMPT_ESCAPED",
-          "USER_PROMPT": "$USER_PROMPT_ESCAPED",
-          "INPUT_DESCRIPTION": "$INPUT_DESCRIPTION_ESCAPED",
-          "OUTPUT_DESCRIPTION": "$OUTPUT_DESCRIPTION_ESCAPED"
+          ROLE_PROMPT: "${{ inputs.ROLE_PROMPT }}"
+          USER_PROMPT: "${{ inputs.USER_PROMPT }}"
+          INPUT_DESCRIPTION: "${{ inputs.INPUT_DESCRIPTION }}"
+          OUTPUT_DESCRIPTION: "${{ inputs.OUTPUT_DESCRIPTION }}"
+          OPEN_AI_MODEL: "${{ inputs.OPEN_AI_MODEL }}"
+          OPEN_AI_TEMPERATURE: "${{ inputs.OPEN_AI_TEMPERATURE }}"
         }
         EOF
       shell: bash
 
-    - name: 'Print the contents of prompts.json'
-      run: cat prompts.json
+    - name: 'Print the contents of config.yaml'
+      run: cat config.yaml
       shell: bash
 
     - name: 'Run the ruby script'
