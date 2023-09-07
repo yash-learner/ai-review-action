@@ -72,6 +72,8 @@ runs:
           "USER_PROMPT": "$USER_PROMPT_ESCAPED",
           "INPUT_DESCRIPTION": "$INPUT_DESCRIPTION_ESCAPED",
           "OUTPUT_DESCRIPTION": "$OUTPUT_DESCRIPTION_ESCAPED"
+          "OPEN_AI_MODEL": "${{ inputs.OPEN_AI_MODEL }}",
+          "OPEN_AI_TEMPERATURE": "${{ inputs.OPEN_AI_TEMPERATURE }}",
         }
         EOF
       shell: bash
