@@ -1,12 +1,10 @@
 require 'openai'
 require 'yaml'
-require 'base64'
 
 class OpenAIClient
   def initialize
     @client = OpenAI::Client.new
-    decoded_config = Base64.decode64(File.read("#{ENV['GITHUB_WORKSPACE']}/config.yml"))
-    @config = YAML.safe_load(decoded_config)
+    @config = YAML.safe_load(File.read("#{ENV['GITHUB_WORKSPACE']}/config.yml"))
 
     @model = @config.fetch('OPEN_AI_MODEL', "gpt-3.5-turbo")
     @temperature = @config.fetch('OPEN_AI_TEMPERATURE', 0.1)
@@ -35,8 +33,8 @@ class OpenAIClient
     @system_prompt
     .gsub("${ROLE_PROMPT}", default_role_prompt)
     .gsub("${INPUT_DESCRIPTION}", default_input_prompt)
-    .gsub("${USER_PROMPT}", user_prompt)
-    .gsub("${SUBMISSION}", "#{Submission.new.checklist}")
+    .gsub("${USER_PROMPT}", default_user_prompt)
+    .gsub("%{SUBMISSION}", "#{Submission.new.checklist}")
     .gsub("${OUTPUT_DESCRIPTION}", default_output_prompt)
   end
 
