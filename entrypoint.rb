@@ -23,4 +23,7 @@ def generate_response
     end
 end
 
+config = YAML.safe_load(File.read("#{ENV['GITHUB_WORKSPACE']}/config.yml"))
+puts "config: #{config}"
+
 PupilfirstAPI::Grader.new.grade(generate_response)

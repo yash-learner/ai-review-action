@@ -57,12 +57,12 @@ runs:
 
     - name: 'Create config.yml'
       run:  |
-        echo "ROLE_PROMPT: ${{ inputs.ROLE_PROMPT }}" >> config.yml
+        echo "ROLE_PROMPT: ${{ inputs.ROLE_PROMPT }}" | base64 >> config.yml
         echo "USER_PROMPT: ${{ inputs.USER_PROMPT }}" | base64 >> config.yml
-        echo "INPUT_DESCRIPTION: ${{ inputs.INPUT_DESCRIPTION }}" >> config.yml
-        echo "OUTPUT_DESCRIPTION: ${{ inputs.OUTPUT_DESCRIPTION }}" >> config.yml
+        echo "INPUT_DESCRIPTION: ${{ inputs.INPUT_DESCRIPTION }}" | base64 >> config.yml
+        echo "OUTPUT_DESCRIPTION: ${{ inputs.OUTPUT_DESCRIPTION }}" | base64 >> config.yml
         echo "OPEN_AI_MODEL: ${{ inputs.OPEN_AI_MODEL }}" >> config.yml
-        echo "OPEN_AI_TEMPERATURE: ${{ inputs.OPEN_AI_TEMPERATURE }}" >> config.yml
+        echo "OPEN_AI_TEMPERATURE: ${{ inputs.OPEN_AI_TEMPERATURE }}" | base64 >> config.yml
       shell: bash
 
     - name: 'Print the contents of config.yaml'

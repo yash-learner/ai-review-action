@@ -5,7 +5,8 @@ require 'base64'
 class OpenAIClient
   def initialize
     @client = OpenAI::Client.new
-    @config = YAML.safe_load(File.read("#{ENV['GITHUB_WORKSPACE']}/config.yml"))
+    decoded_config = Base64.decode64(File.read("#{ENV['GITHUB_WORKSPACE']}/config.yml"))
+    @config = YAML.safe_load(decoded_config)
 
     @model = @config.fetch('OPEN_AI_MODEL', "gpt-3.5-turbo")
     @temperature = @config.fetch('OPEN_AI_TEMPERATURE', 0.1)
@@ -31,8 +32,6 @@ class OpenAIClient
   end
 
   def prompt
-    user_prompt = Base64.decode64(@config.fetch('USER_PROMPT', default_user_prompt))
-    puts "user_prompt: #{user_prompt}"
     @system_prompt
     .gsub("${ROLE_PROMPT}", default_role_prompt)
     .gsub("${INPUT_DESCRIPTION}", default_input_prompt)
