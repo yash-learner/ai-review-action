@@ -1,18 +1,14 @@
 require 'openai'
-require 'json'
+require 'yaml'
 
 class OpenAIClient
   def initialize
     @client = OpenAI::Client.new
-    @model = ENV.fetch('OPEN_AI_MODEL', "gpt-3.5-turbo")
-    @temperature = ENV.fetch('OPEN_AI_TEMPERATURE', 0.1)
+    @config = YAML.safe_load(File.read("#{ENV['GITHUB_WORKSPACE']}/config.yml"))
 
-    prompts = JSON.parse(File.read("#{ENV['GITHUB_WORKSPACE']}/prompts.json"))
-    @role_prompt = prompts.fetch("ROLE_PROMPT", default_role_prompt)
-    @user_prompt = prompts.fetch("USER_PROMPT", default_user_prompt)
-    @input_description = prompts.fetch("INPUT_DESCRIPTION", default_input_prompt)
-    @output_description = prompts.fetch("OUTPUT_DESCRIPTION", default_output_prompt)
-    @system_prompt = prompts.fetch('SYSTEM_PROMPT', system_prompt_default)
+    @model = @config.fetch('OPEN_AI_MODEL', "gpt-3.5-turbo")
+    @temperature = @config.fetch('OPEN_AI_TEMPERATURE', 0.1)
+    @system_prompt = @config.fetch('SYSTEM_PROMPT', system_prompt_default)
   end
 
   def ask
@@ -35,18 +31,23 @@ class OpenAIClient
 
   def prompt
     @system_prompt
-    .gsub("@@SUBMISSION@@", "#{Submission.new.checklist}")
+    .gsub("/${SUBMISSION}", "${SUBMISSION}")
+    .gsub("${ROLE_PROMPT}", default_role_prompt)
+    .gsub("${INPUT_DESCRIPTION}", default_input_prompt)
+    .gsub("${USER_PROMPT}", default_user_prompt)
+    .gsub("${SUBMISSION}", "#{Submission.new.checklist}")
+    .gsub("${OUTPUT_DESCRIPTION}", default_output_prompt)
   end
 
   def system_prompt_default
 <<-SYSTEM_PROMPT
-#{@role_prompt}
+#{@config.fetch("ROLE_PROMPT", "${ROLE_PROMPT}")}
 
-#{@input_description}
+#{@config.fetch("INPUT_DESCRIPTION", "${INPUT_DESCRIPTION}")}
 
-#{@user_prompt}
+#{@config.fetch("USER_PROMPT", "${USER_PROMPT}")}
 
-#{@output_description}
+#{@config.fetch("OUTPUT_DESCRIPTION", "${OUTPUT_DESCRIPTION}")}
 SYSTEM_PROMPT
   end
 
