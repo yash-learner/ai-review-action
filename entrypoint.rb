@@ -23,7 +23,7 @@ def generate_response
     end
 end
 
-config = YAML.safe_load(File.read("#{ENV['GITHUB_WORKSPACE']}/config.yml"))
-puts "config: #{config}"
+decoded_config = Base64.decode64(File.read("#{ENV['GITHUB_WORKSPACE']}/config.yml"))
+@config = YAML.safe_load(decoded_config)
 
 PupilfirstAPI::Grader.new.grade(generate_response)
