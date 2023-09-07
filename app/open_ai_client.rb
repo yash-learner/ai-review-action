@@ -5,8 +5,7 @@ require 'base64'
 class OpenAIClient
   def initialize
     @client = OpenAI::Client.new
-    decoded_config = Base64.decode64(File.read("#{ENV['GITHUB_WORKSPACE']}/config.yml"))
-    @config = YAML.safe_load(decoded_config)
+    @config = YAML.safe_load(File.read("#{ENV['GITHUB_WORKSPACE']}/config.yml"))
 
     @model = @config.fetch('OPEN_AI_MODEL', "gpt-3.5-turbo")
     @temperature = @config.fetch('OPEN_AI_TEMPERATURE', 0.1)
