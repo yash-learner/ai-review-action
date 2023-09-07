@@ -57,14 +57,14 @@ runs:
 
     - name: "Replace ${SUBMISSION} with /${SUBMISSION}"
       run: |
-        echo "USER_PROMPT_ESCAPED=$(echo "${{ inputs.USER_PROMPT }}" | sed 's/\${SUBMISSION}/\/\${SUBMISSION}/')" >> $GITHUB_ENV
+        echo "USER_PROMPT_ESCAPED=$(echo -n "${{ inputs.USER_PROMPT }}" | sed 's/\${SUBMISSION}/\/\${SUBMISSION}/')" >> $GITHUB_ENV
       shell: bash
 
     - name: 'Create config.yml'
       run:  |
         cat <<EOF > config.yml
         ROLE_PROMPT: "${{ inputs.ROLE_PROMPT }}"
-        USER_PROMPT: "${{ inputs.USER_PROMPT }}"
+        USER_PROMPT: "$(echo "${{ inputs.USER_PROMPT }}" | awk '{gsub(/\$\{SUBMISSION\}/,"\/&"); print}')"
         INPUT_DESCRIPTION: "${{ inputs.INPUT_DESCRIPTION }}"
         OUTPUT_DESCRIPTION: "${{ inputs.OUTPUT_DESCRIPTION }}"
         OPEN_AI_MODEL: "${{ inputs.OPEN_AI_MODEL }}"
