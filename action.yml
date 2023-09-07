@@ -61,7 +61,7 @@ runs:
         echo "USER_PROMPT: ${{ inputs.USER_PROMPT }}" | base64 >> config.yml
         echo "INPUT_DESCRIPTION: ${{ inputs.INPUT_DESCRIPTION }}" | base64 >> config.yml
         echo "OUTPUT_DESCRIPTION: ${{ inputs.OUTPUT_DESCRIPTION }}" | base64 >> config.yml
-        echo "OPEN_AI_MODEL: ${{ inputs.OPEN_AI_MODEL }}" >> config.yml
+        echo "OPEN_AI_MODEL: ${{ inputs.OPEN_AI_MODEL }}" | base64 >> config.yml
         echo "OPEN_AI_TEMPERATURE: ${{ inputs.OPEN_AI_TEMPERATURE }}" | base64 >> config.yml
       shell: bash
 
