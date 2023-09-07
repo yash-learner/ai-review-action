@@ -4,7 +4,7 @@ require 'yaml'
 class OpenAIClient
   def initialize
     @client = OpenAI::Client.new
-    @config = YAML.safe_load(File.read("#{ENV['GITHUB_WORKSPACE']}/config.yml"))
+    @config = JSON.parse(File.read("#{ENV['GITHUB_WORKSPACE']}/config.json"))
 
     @model = @config.fetch('OPEN_AI_MODEL', "gpt-3.5-turbo")
     @temperature = @config.fetch('OPEN_AI_TEMPERATURE', 0.1)
