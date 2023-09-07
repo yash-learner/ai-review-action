@@ -1,5 +1,6 @@
 require 'openai'
 require 'yaml'
+require 'base64'
 
 class OpenAIClient
   def initialize
@@ -30,10 +31,11 @@ class OpenAIClient
   end
 
   def prompt
+    user_prompt = Base64.decode64(@config.fetch('USER_PROMPT', default_user_prompt))
     @system_prompt
     .gsub("${ROLE_PROMPT}", default_role_prompt)
     .gsub("${INPUT_DESCRIPTION}", default_input_prompt)
-    .gsub("${USER_PROMPT}", default_user_prompt)
+    .gsub("${USER_PROMPT}", user_prompt)
     .gsub("${SUBMISSION}", "#{Submission.new.checklist}")
     .gsub("${OUTPUT_DESCRIPTION}", default_output_prompt)
   end

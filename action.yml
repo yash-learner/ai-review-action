@@ -55,16 +55,10 @@ runs:
         gem install ruby-openai dotenv pry graphql-client
       shell: bash
 
-    - name: 'Prepare Inputs'
-      run: |
-        USER_PROMPT_ESCAPED="${{ inputs.USER_PROMPT }}"
-        echo "USER_PROMPT_ESCAPED=${USER_PROMPT_ESCAPED//\$\{SUBMISSION\}/\$${SUBMISSION}}" >> $GITHUB_ENV
-      shell: bash
-
     - name: 'Create config.yml'
       run:  |
         echo "ROLE_PROMPT: ${{ inputs.ROLE_PROMPT }}" >> config.yml
-        echo "USER_PROMPT: $USER_PROMPT_ESCAPED" >> config.yml
+        echo "USER_PROMPT: ${{ inputs.USER_PROMPT }}" | base64 >> config.yml
         echo "INPUT_DESCRIPTION: ${{ inputs.INPUT_DESCRIPTION }}" >> config.yml
         echo "OUTPUT_DESCRIPTION: ${{ inputs.OUTPUT_DESCRIPTION }}" >> config.yml
         echo "OPEN_AI_MODEL: ${{ inputs.OPEN_AI_MODEL }}" >> config.yml
