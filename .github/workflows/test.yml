@@ -41,4 +41,4 @@ jobs:
 
             The student's submission will be as follows:
 
-            %{SUBMISSION}
+            @@SUBMISSION@@

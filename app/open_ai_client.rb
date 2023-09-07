@@ -34,7 +34,7 @@ class OpenAIClient
     .gsub("${ROLE_PROMPT}", default_role_prompt)
     .gsub("${INPUT_DESCRIPTION}", default_input_prompt)
     .gsub("${USER_PROMPT}", default_user_prompt)
-    .gsub("%{SUBMISSION}", "#{Submission.new.checklist}")
+    .gsub("@@SUBMISSION@@", "#{Submission.new.checklist}")
     .gsub("${OUTPUT_DESCRIPTION}", default_output_prompt)
   end
 
