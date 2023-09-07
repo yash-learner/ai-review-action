@@ -6,8 +6,8 @@ class OpenAIClient
     @client = OpenAI::Client.new
     @config = JSON.parse(File.read("#{ENV['GITHUB_WORKSPACE']}/config.json"))
 
-    @model = @config.fetch('OPEN_AI_MODEL', "gpt-3.5-turbo")
-    @temperature = @config.fetch('OPEN_AI_TEMPERATURE', 0.1)
+    @model = @config.fetch("OPEN_AI_MODEL", "gpt-3.5-turbo")
+    @temperature = @config.fetch("OPEN_AI_TEMPERATURE", 0.1)
     @system_prompt = @config.fetch('SYSTEM_PROMPT', system_prompt_default)
   end
 
