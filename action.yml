@@ -69,7 +69,7 @@ runs:
           OPEN_AI_MODEL: ${{ inputs.OPEN_AI_MODEL }}
           OPEN_AI_TEMPERATURE: ${{ inputs.OPEN_AI_TEMPERATURE }}
           EOF
-        shell: bash
+      shell: bash
 
     - name: 'Print the contents of config.yml'
       run: cat config.yml
