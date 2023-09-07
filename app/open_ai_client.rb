@@ -31,7 +31,6 @@ class OpenAIClient
 
   def prompt
     @system_prompt
-    .gsub("/${SUBMISSION}", "${SUBMISSION}")
     .gsub("${ROLE_PROMPT}", default_role_prompt)
     .gsub("${INPUT_DESCRIPTION}", default_input_prompt)
     .gsub("${USER_PROMPT}", default_user_prompt)
