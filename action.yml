@@ -55,17 +55,19 @@ runs:
         gem install ruby-openai dotenv pry graphql-client
       shell: bash
 
+    - name: "Replace ${SUBMISSION} with /${SUBMISSION}"
+      run: |
+        echo "USER_PROMPT_ESCAPED=$(echo "${{ inputs.USER_PROMPT }}" | sed 's/\${SUBMISSION}/\/\${SUBMISSION}/')" >> $GITHUB_ENV
+
     - name: 'Create config.yml'
       run:  |
         cat <<EOF > config.yml
-        {
-          ROLE_PROMPT: "${{ inputs.ROLE_PROMPT }}"
-          USER_PROMPT: "${{ inputs.USER_PROMPT }}"
-          INPUT_DESCRIPTION: "${{ inputs.INPUT_DESCRIPTION }}"
-          OUTPUT_DESCRIPTION: "${{ inputs.OUTPUT_DESCRIPTION }}"
-          OPEN_AI_MODEL: "${{ inputs.OPEN_AI_MODEL }}"
-          OPEN_AI_TEMPERATURE: "${{ inputs.OPEN_AI_TEMPERATURE }}"
-        }
+        ROLE_PROMPT: "${{ inputs.ROLE_PROMPT }}"
+        USER_PROMPT: "${{ inputs.USER_PROMPT }}"
+        INPUT_DESCRIPTION: "${{ inputs.INPUT_DESCRIPTION }}"
+        OUTPUT_DESCRIPTION: "${{ inputs.OUTPUT_DESCRIPTION }}"
+        OPEN_AI_MODEL: "${{ inputs.OPEN_AI_MODEL }}"
+        OPEN_AI_TEMPERATURE: "${{ inputs.OPEN_AI_TEMPERATURE }}"
         EOF
       shell: bash
 
