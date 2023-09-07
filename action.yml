@@ -59,7 +59,7 @@ runs:
       run:  |
         cat <<EOF > config.yml
         ROLE_PROMPT: "${{ inputs.ROLE_PROMPT }}"
-        USER_PROMPT: "$(echo "${{ inputs.USER_PROMPT }}" | awk '{gsub(/\$\{SUBMISSION\}/,"\/&"); print}')"
+        USER_PROMPT: "$(echo '${{ inputs.USER_PROMPT }}' | awk '{gsub(/\$\{SUBMISSION\}/,"/&"); print}')"
         INPUT_DESCRIPTION: "${{ inputs.INPUT_DESCRIPTION }}"
         OUTPUT_DESCRIPTION: "${{ inputs.OUTPUT_DESCRIPTION }}"
         OPEN_AI_MODEL: "${{ inputs.OPEN_AI_MODEL }}"
@@ -68,7 +68,7 @@ runs:
       shell: bash
 
     - name: 'Print the contents of config.yaml'
-      run: cat config.yaml
+      run: cat config.yml
       shell: bash
 
     - name: 'Run the ruby script'
