@@ -56,16 +56,18 @@ runs:
       shell: bash
 
     - name: 'Create config.yml'
-      run:  |
-        echo "ROLE_PROMPT: ${{ inputs.ROLE_PROMPT }}" | base64 >> config.yml
-        echo "USER_PROMPT: ${{ inputs.USER_PROMPT }}" | base64 >> config.yml
-        echo "INPUT_DESCRIPTION: ${{ inputs.INPUT_DESCRIPTION }}" | base64 >> config.yml
-        echo "OUTPUT_DESCRIPTION: ${{ inputs.OUTPUT_DESCRIPTION }}" | base64 >> config.yml
-        echo "OPEN_AI_MODEL: ${{ inputs.OPEN_AI_MODEL }}" | base64 >> config.yml
-        echo "OPEN_AI_TEMPERATURE: ${{ inputs.OPEN_AI_TEMPERATURE }}" | base64 >> config.yml
+      run: |
+        cat <<EOF > config.yml
+        ROLE_PROMPT: $(echo -n "${{ inputs.ROLE_PROMPT }}" | base64)
+        USER_PROMPT: $(echo -n "${{ inputs.USER_PROMPT }}" | base64)
+        INPUT_DESCRIPTION: $(echo -n "${{ inputs.INPUT_DESCRIPTION }}" | base64)
+        OUTPUT_DESCRIPTION: $(echo -n "${{ inputs.OUTPUT_DESCRIPTION }}" | base64)
+        OPEN_AI_MODEL: $(echo -n "${{ inputs.OPEN_AI_MODEL }}" | base64)
+        OPEN_AI_TEMPERATURE: $(echo -n "${{ inputs.OPEN_AI_TEMPERATURE }}" | base64)
+        EOF
       shell: bash
 
-    - name: 'Print the contents of config.yaml'
+    - name: 'Print the contents of config.yml'
       run: cat config.yml
       shell: bash
 
