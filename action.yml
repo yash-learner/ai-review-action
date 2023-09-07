@@ -58,7 +58,7 @@ runs:
     - name: 'Create config.yml'
       run:  |
         echo "ROLE_PROMPT: ${{ inputs.ROLE_PROMPT }}" >> config.yml
-        echo "USER_PROMPT: ${{ inputs.USER_PROMPT }}" >> config.yml
+        echo "USER_PROMPT: ${{ inputs.USER_PROMPT//\$\{SUBMISSION\}/\$${SUBMISSION} }}" >> config.yml
         echo "INPUT_DESCRIPTION: ${{ inputs.INPUT_DESCRIPTION }}" >> config.yml
         echo "OUTPUT_DESCRIPTION: ${{ inputs.OUTPUT_DESCRIPTION }}" >> config.yml
         echo "OPEN_AI_MODEL: ${{ inputs.OPEN_AI_MODEL }}" >> config.yml
