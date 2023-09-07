@@ -57,14 +57,19 @@ runs:
 
     - name: 'Create config.yml'
       run:  |
-        cat <<EOF > config.yml
-        ROLE_PROMPT: ${{ inputs.ROLE_PROMPT }}
-        USER_PROMPT: ${{ inputs.USER_PROMPT }}
-        INPUT_DESCRIPTION: ${{ inputs.INPUT_DESCRIPTION }}
-        OUTPUT_DESCRIPTION: ${{ inputs.OUTPUT_DESCRIPTION }}
-        OPEN_AI_MODEL: ${{ inputs.OPEN_AI_MODEL }}
-        OPEN_AI_TEMPERATURE: ${{ inputs.OPEN_AI_TEMPERATURE }}
-      shell: bash
+          cat <<EOF > config.yml
+      ROLE_PROMPT: |
+        ${{ inputs.ROLE_PROMPT }}
+      USER_PROMPT: |
+        ${{ inputs.USER_PROMPT }}
+      INPUT_DESCRIPTION: |
+        ${{ inputs.INPUT_DESCRIPTION }}
+      OUTPUT_DESCRIPTION: |
+        ${{ inputs.OUTPUT_DESCRIPTION }}
+      OPEN_AI_MODEL: ${{ inputs.OPEN_AI_MODEL }}
+      OPEN_AI_TEMPERATURE: ${{ inputs.OPEN_AI_TEMPERATURE }}
+      EOF
+        shell: bash
 
     - name: 'Print the contents of config.yml'
       run: cat config.yml
