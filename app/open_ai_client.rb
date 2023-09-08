@@ -4,7 +4,9 @@ require 'yaml'
 class OpenAIClient
   def initialize
     @client = OpenAI::Client.new
-    @config = YAML.safe_load(File.read('.github/workflows/ci.js.yml'))
+
+    content = YAML.safe_load(File.read('.github/workflows/ci.js.yml'))
+    @config = content.dig('jobs', 'test', 'steps').find { |step| step['id'] == 'ai-review' }&.fetch('with', {})
 
     @model = @config.fetch('OPEN_AI_MODEL', "gpt-3.5-turbo")
     @temperature = @config.fetch('OPEN_AI_TEMPERATURE', 0.1).to_f
