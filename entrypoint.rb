@@ -31,11 +31,4 @@ else
 end
 
 
-github_action_path = ENV['GITHUB_ACTION_PATH'] || ''
-workflow_file_path = ENV.fetch('WORKFLOW_FILE_PATH', '.github/workflows/ci.js.yml')
-
-content = YAML.safe_load(File.read(File.join(github_action_path, workflow_file_path)))
-@config = content.dig('jobs', 'test', 'steps').find { |step| step['id'] == 'ai-review' }&.fetch('with', {})
-puts "content: #{content}"
-
 PupilfirstAPI::Grader.new.grade(generate_response)
