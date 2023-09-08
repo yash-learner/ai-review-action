@@ -23,4 +23,16 @@ def generate_response
     end
 end
 
+
+if File.exist?('.github/workflows/ci.js.yml')
+    puts "The file exists!"
+else
+    puts "The file does not exist!"
+end
+
+
+puts ENV.fetch("WORKFLOW_FILE_PATH", ".github/workflows/ci.js.yml")
+content = YAML.safe_load(File.read(ENV.fetch("WORKFLOW_FILE_PATH", ".github/workflows/ci.js.yml")))
+puts "content: #{content}"
+
 PupilfirstAPI::Grader.new.grade(generate_response)
