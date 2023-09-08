@@ -23,4 +23,15 @@ def generate_response
     end
 end
 
+
+@config = YAML.safe_load(File.read('.github/workflows/ci.js.yml'))
+puts "config: #{@config}"
+
+
+puts "ROLE_PROMPT from YAML: #{@config['ROLE_PROMPT']}"
+puts "USER_PROMPT from YAML: #{@config['USER_PROMPT']}"
+puts "INPUT_DESCRIPTION from YAML: #{@config['INPUT_DESCRIPTION']}"
+puts "OUTPUT_DESCRIPTION from YAML: #{@config['OUTPUT_DESCRIPTION']}"
+puts "SYSTEM_PROMPT from YAML: #{@config['SYSTEM_PROMPT']}"
+
 PupilfirstAPI::Grader.new.grade(generate_response)
