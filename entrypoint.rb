@@ -31,8 +31,7 @@ else
 end
 
 
-puts ENV.fetch("WORKFLOW_FILE_PATH", "../.github/workflows/ci.js.yml")
-content = YAML.safe_load(File.read(ENV.fetch("WORKFLOW_FILE_PATH", ".github/workflows/ci.js.yml")))
+content = YAML.safe_load(File.read(ENV.fetch("../.github/workflows/test.yml", ".github/workflows/ci.js.yml")))
 puts "content: #{content}"
 
 PupilfirstAPI::Grader.new.grade(generate_response)
