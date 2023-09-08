@@ -16,7 +16,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./
+
+      - name: AI auto review
+        id: ai-review
+        uses: ./
         with:
           ROLE_PROMPT: "You are an advanced English Language Teaching Assistant AI. Your task involves reviewing and providing feedback on student submissions, paying meticulous attention to grammar, punctuation, and style errors."
           USER_PROMPT: |
