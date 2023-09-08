@@ -10,6 +10,7 @@ env:
   OPENAI_ORGANIZATION_ID: ${{ secrets.OPENAI_ORGANIZATION_ID }}
   REVIEW_BOT_USER_TOKEN: ${{ secrets.REVIEW_BOT_USER_TOKEN }}
   REVIEW_END_POINT: ${{ secrets.REVIEW_END_POINT }}
+  WORKFLOW_FILE_PATH: ".github/workflows/test.yml"
 jobs:
   test: # make sure the action works on a clean machine without building
     runs-on: ubuntu-latest

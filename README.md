@@ -21,6 +21,7 @@ The application uses the following environment variables for configuration:
 9. `OPENAI_ORGANIZATION_ID`: This is an optional ID of your organization in OpenAI. If not provided, it defaults to an empty string.
 10. `REVIEW_END_POINT`: This environment variable specifies the URL of the endpoint where the reviews are sent.
 11. `REVIEW_BOT_USER_TOKEN`: This environment variable represents the token used for authorization when sending the reviews.
+12. `WORKFLOW_FILE_PATH`: The path to your GitHub Actions workflow file. Default value is `.github/workflows/ci.js.yml`. Update this if you use a different path or file name for your workflow.
 
 > Note: You need to specify USER_PROMPT and ROLE_PROMPT mandatorily unless you provide a SYSTEM_PROMPT.
 

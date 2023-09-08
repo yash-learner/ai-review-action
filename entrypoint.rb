@@ -23,8 +23,8 @@ def generate_response
     end
 end
 
-
-@config = YAML.safe_load(File.read('.github/workflows/ci.js.yml'))
+content = YAML.safe_load(File.read(ENV['WORKFLOW_FILE_PATH'] || '.github/workflows/ci.js.yml'))
+@config = content.dig('jobs', 'test', 'steps').find { |step| step['id'] == 'ai-review' }&.fetch('with', {})
 puts "config: #{@config}"
 
 
