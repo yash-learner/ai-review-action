@@ -55,27 +55,27 @@ runs:
         gem install ruby-openai dotenv pry graphql-client
       shell: bash
 
-    - name: 'Escape newlines for JSON compatibility'
+    - name: 'Generate JSON config directly using jq'
       run: |
-        echo "ROLE_PROMPT_ESCAPED=$(echo -n "${{ inputs.ROLE_PROMPT }}" | sed ':a;N;$!ba;s/\n/\\n/g')" >> $GITHUB_ENV
-        echo "USER_PROMPT_ESCAPED=$(echo -n "${{ inputs.USER_PROMPT }}" | sed ':a;N;$!ba;s/\n/\\n/g')" >> $GITHUB_ENV
-        echo "INPUT_DESCRIPTION_ESCAPED=$(echo -n "${{ inputs.INPUT_DESCRIPTION }}" | sed ':a;N;$!ba;s/\n/\\n/g')" >> $GITHUB_ENV
-        echo "OUTPUT_DESCRIPTION_ESCAPED=$(echo -n "${{ inputs.OUTPUT_DESCRIPTION }}" | sed ':a;N;$!ba;s/\n/\\n/g')" >> $GITHUB_ENV
+        jq -n \
+          --arg rp "${{ inputs.ROLE_PROMPT }}" \
+          --arg up "${{ inputs.USER_PROMPT }}" \
+          --arg idesc "${{ inputs.INPUT_DESCRIPTION }}" \
+          --arg odesc "${{ inputs.OUTPUT_DESCRIPTION }}" \
+          --arg model "${{ inputs.OPEN_AI_MODEL }}" \
+          --arg temp "${{ inputs.OPEN_AI_TEMPERATURE }}" \
+          '{
+            ROLE_PROMPT: $rp,
+            USER_PROMPT: $up,
+            INPUT_DESCRIPTION: $idesc,
+            OUTPUT_DESCRIPTION: $odesc,
+            OPEN_AI_MODEL: $model,
+            OPEN_AI_TEMPERATURE: $temp
+          }' > config.json
       shell: bash
 
-
-    - name: 'Create JSON config file'
-      run:  |
-        cat <<EOF > config.json
-        {
-          "ROLE_PROMPT": "$ROLE_PROMPT_ESCAPED",
-          "USER_PROMPT": "$USER_PROMPT_ESCAPED",
-          "INPUT_DESCRIPTION": "$INPUT_DESCRIPTION_ESCAPED",
-          "OUTPUT_DESCRIPTION": "$OUTPUT_DESCRIPTION_ESCAPED",
-          "OPEN_AI_MODEL": "${{ inputs.OPEN_AI_MODEL }}",
-          "OPEN_AI_TEMPERATURE": ${{ inputs.OPEN_AI_TEMPERATURE }}
-        }
-        EOF
+    - name: 'Print the contents of config.json'
+      run: cat config.json
       shell: bash
 
     - name: 'Print the contents of config.json'
