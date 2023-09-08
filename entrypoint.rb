@@ -24,14 +24,14 @@ def generate_response
 end
 
 
-if File.exist?('.github/workflows/test.yml')
+if File.exist?('../.github/workflows/test.yml')
     puts "The file exists!"
 else
     puts "The file does not exist!"
 end
 
 
-puts ENV.fetch("WORKFLOW_FILE_PATH", ".github/workflows/ci.js.yml")
+puts ENV.fetch("WORKFLOW_FILE_PATH", "../.github/workflows/ci.js.yml")
 content = YAML.safe_load(File.read(ENV.fetch("WORKFLOW_FILE_PATH", ".github/workflows/ci.js.yml")))
 puts "content: #{content}"
 
