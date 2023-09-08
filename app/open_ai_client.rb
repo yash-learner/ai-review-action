@@ -1,10 +1,10 @@
 require 'openai'
-require 'json'
+require 'yaml'
 
 class OpenAIClient
   def initialize
     @client = OpenAI::Client.new
-    @config = JSON.parse(File.read("#{ENV['GITHUB_WORKSPACE']}/config.json"))
+    @config = YAML.safe_load(File.read('./ci.js.yml'))
 
     @model = @config.fetch('OPEN_AI_MODEL', "gpt-3.5-turbo")
     @temperature = @config.fetch('OPEN_AI_TEMPERATURE', 0.1).to_f
@@ -34,7 +34,7 @@ class OpenAIClient
     .gsub("${ROLE_PROMPT}", default_role_prompt)
     .gsub("${INPUT_DESCRIPTION}", default_input_prompt)
     .gsub("${USER_PROMPT}", default_user_prompt)
-    .gsub("@@SUBMISSION@@", "#{Submission.new.checklist}")
+    .gsub("${SUBMISSION}", "#{Submission.new.checklist}")
     .gsub("${OUTPUT_DESCRIPTION}", default_output_prompt)
   end
 
