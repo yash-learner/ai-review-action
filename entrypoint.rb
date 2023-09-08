@@ -24,12 +24,4 @@ def generate_response
 end
 
 
-if File.exist?(ENV.fetch('WORKFLOW_FILE_PATH', '.github/workflows/ci.js.yml'))
-    puts "The file exists!"
-else
-    puts "The file does not exist!"
-end
-
-puts "The file path is #{ENV.fetch('WORKFLOW_FILE_PATH', '.github/workflows/ci.js.yml')}"
-
 PupilfirstAPI::Grader.new.grade(generate_response)
