@@ -7,7 +7,7 @@ class OpenAIClient
     @config = JSON.parse(File.read("#{ENV['GITHUB_WORKSPACE']}/config.json"))
 
     @model = ENV.fetch('OPEN_AI_MODEL', "gpt-3.5-turbo")
-    @temperature = ENV.fetch('OPEN_AI_TEMPERATURE', 0.1)
+    @temperature = ENV.fetch('OPEN_AI_TEMPERATURE', 0.1).to_f
     @system_prompt = @config.fetch('SYSTEM_PROMPT', system_prompt_default)
   end
 
