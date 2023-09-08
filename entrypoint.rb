@@ -24,7 +24,7 @@ def generate_response
 end
 
 
-if File.exist?('.github/workflows/ci.js.yml')
+if File.exist?('.github/workflows/test.yml')
     puts "The file exists!"
 else
     puts "The file does not exist!"
