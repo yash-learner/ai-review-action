@@ -5,7 +5,8 @@ class OpenAIClient
   def initialize
     @client = OpenAI::Client.new
 
-    content = YAML.safe_load(File.read(ENV['WORKFLOW_FILE_PATH'] || '.github/workflows/ci.js.yml'))
+    content = YAML.safe_load(File.read(ENV.fetch("WORKFLOW_FILE_PATH", ".github/workflows/ci.js.yml")))
+    puts "content: #{content}"
     @config = content.dig('jobs', 'test', 'steps').find { |step| step['id'] == 'ai-review' }&.fetch('with', {})
 
     @model = @config.fetch('OPEN_AI_MODEL', "gpt-3.5-turbo")
