@@ -55,7 +55,7 @@ jobs:
         uses: pupilfirst/ai-review-action@v1
         env:
           ROLE_PROMPT: "You are an advanced English Language Teaching Assistant AI. Your task involves reviewing and providing feedback on student submissions, paying meticulous attention to grammar, punctuation, and style errors."
-          USER_PROMPT: >
+          USER_PROMPT: |
             The conversation should include the following:
             - The specific Discord channel the conversation takes place in.
             - The initial question, marked with "Student: ", outlining the student's doubt.

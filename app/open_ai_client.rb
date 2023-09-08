@@ -6,7 +6,9 @@ class OpenAIClient
     @client = OpenAI::Client.new
 
     content = YAML.safe_load(File.read(ENV.fetch('WORKFLOW_FILE_PATH', '.github/workflows/ci.js.yml')))
-    @config = content.dig('jobs', 'test', 'steps').find { |step| step['id'] == 'ai-review' }&.fetch('with', {})
+    @config = content.dig('jobs', 'test', 'steps').find do |step|
+      step['uses'] && step['uses'].include?('pupilfirst/ai-review-action')
+    end.fetch('with', {})
 
     @model = @config.fetch('OPEN_AI_MODEL', "gpt-3.5-turbo")
     @temperature = @config.fetch('OPEN_AI_TEMPERATURE', 0.1).to_f
