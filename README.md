@@ -87,6 +87,13 @@ jobs:
           description: AI has reviewed the submission successfully
 ```
 
+## Things to be taken care while running the action locally
+
+1. cp example.env .env
+
+2. Update the values in .env file.
+
+
 ## Releasing a new version
 
 1. **Delete the Local Tag**: First, delete the local `v1` tag.
