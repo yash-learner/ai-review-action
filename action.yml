@@ -65,14 +65,15 @@ runs:
           --arg model "${{ inputs.OPEN_AI_MODEL }}" \
           --arg temp "${{ inputs.OPEN_AI_TEMPERATURE }}" \
           '{
-            ROLE_PROMPT: $rp,
-            USER_PROMPT: $up,
-            INPUT_DESCRIPTION: $idesc,
-            OUTPUT_DESCRIPTION: $odesc,
-            OPEN_AI_MODEL: $model,
-            OPEN_AI_TEMPERATURE: $temp
+            "ROLE_PROMPT": $rp,
+            "USER_PROMPT": $up,
+            "INPUT_DESCRIPTION": $idesc,
+            "OUTPUT_DESCRIPTION": $odesc,
+            "OPEN_AI_MODEL": $model,
+            "OPEN_AI_TEMPERATURE": $temp
           }' > config.json
       shell: bash
+
 
     - name: 'Print the contents of config.json'
       run: cat config.json
