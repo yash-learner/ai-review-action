@@ -7,7 +7,7 @@ class OpenAIClient
 
     content = YAML.safe_load(File.read(ENV.fetch('WORKFLOW_FILE_PATH', '.github/workflows/ci.js.yml')))
     @config = content.dig('jobs', 'test', 'steps').find do |step|
-      step['uses'] && step['uses'].include?('pupilfirst/ai-review-action')
+      ( step['uses']&.include?('pupilfirst/ai-review-action') || step['id']&.include?('ai-review') )
     end.fetch('with', {})
 
     @model = @config.fetch('OPEN_AI_MODEL', "gpt-3.5-turbo")
