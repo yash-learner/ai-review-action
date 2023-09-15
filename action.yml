@@ -1,11 +1,14 @@
 name: 'AI review action'
 description: 'Provides AI-generated feedback on student submissions'
 author: 'Pupilfirst'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
 inputs:
   OPEN_AI_MODEL:
     description: 'OpenAI model used to process requests'
     required: false
-    default: "gpt-3.5-turbo"
+    default: 'gpt-3.5-turbo'
   OPEN_AI_TEMPERATURE:
     description: 'Adjusts the randomness of the model output'
     required: false
@@ -38,23 +41,3 @@ inputs:
   REVIEW_BOT_USER_TOKEN:
     description: 'Token used for authorization when sending the reviews to the LMS'
     required: true
-runs:
-  using: 'composite'
-  steps:
-    - name: 'Checkout'
-      uses: 'actions/checkout@v4'
-
-    - name: 'Setup Ruby'
-      uses: 'ruby/setup-ruby@v1'
-      with:
-        ruby-version: '3.1'
-
-    - name: 'Install dependencies'
-      run: |
-        gem install graphql -v 2.0.27
-        gem install ruby-openai dotenv pry graphql-client
-      shell: bash
-
-    - name: 'Run the ruby script'
-      run: ruby  ${{ github.action_path }}/entrypoint.rb
-      shell: bash

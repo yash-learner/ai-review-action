@@ -5,7 +5,7 @@ class OpenAIClient
   def initialize
     @client = OpenAI::Client.new
 
-    content = YAML.safe_load(File.read(ENV.fetch('WORKFLOW_FILE_PATH', '.github/workflows/ci.js.yml')))
+    content = YAML.safe_load(File.read(ENV.fetch('WORKFLOW_FILE_PATH', './.github/workflows/ci.js.yml')))
     @config = content.dig('jobs', 'test', 'steps').find do |step|
       ( step['uses']&.include?('pupilfirst/ai-review-action') || step['id']&.include?('ai-review') )
     end.fetch('with', {})
