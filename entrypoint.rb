@@ -23,5 +23,4 @@ def generate_response
     end
 end
 
-
 PupilfirstAPI::Grader.new.grade(generate_response)
