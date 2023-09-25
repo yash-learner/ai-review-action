@@ -35,10 +35,6 @@ class OpenAIClient
     response.dig("choices", 0, "message", "content")
   end
 
-  def replace_placeholder(text, placeholder, value)
-    text.gsub("${#{placeholder}}", value)
-  end
-
   def prompt
     @system_prompt
     .gsub("${ROLE_PROMPT}", default_role_prompt)
