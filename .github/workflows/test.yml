@@ -10,15 +10,18 @@ env:
   OPENAI_ORGANIZATION_ID: ${{ secrets.OPENAI_ORGANIZATION_ID }}
   REVIEW_BOT_USER_TOKEN: ${{ secrets.REVIEW_BOT_USER_TOKEN }}
   REVIEW_END_POINT: ${{ secrets.REVIEW_END_POINT }}
+  WORKFLOW_FILE_PATH: ./.github/workflows/test.yml
 jobs:
   test: # make sure the action works on a clean machine without building
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: ./
+      - uses: actions/checkout@v4
+      - name: AI auto review
+        id: ai-review
+        uses: ./
         with:
           ROLE_PROMPT: "You are an advanced English Language Teaching Assistant AI. Your task involves reviewing and providing feedback on student submissions, paying meticulous attention to grammar, punctuation, and style errors."
-          USER_PROMPT: >
+          USER_PROMPT: |
             The conversation should include the following:
             - The specific Discord channel the conversation takes place in.
             - The initial question, marked with "Student: ", outlining the student's doubt.

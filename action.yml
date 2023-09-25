@@ -12,7 +12,7 @@ inputs:
   OPEN_AI_TEMPERATURE:
     description: 'Adjusts the randomness of the model output'
     required: false
-    default: '0.1'
+    default: 0.1
   SYSTEM_PROMPT:
     description: 'System prompt to be given to the AI'
     required: false

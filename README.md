@@ -21,12 +21,15 @@ The application uses the following environment variables for configuration:
 9. `OPENAI_ORGANIZATION_ID`: This is an optional ID of your organization in OpenAI. If not provided, it defaults to an empty string.
 10. `REVIEW_END_POINT`: This environment variable specifies the URL of the endpoint where the reviews are sent.
 11. `REVIEW_BOT_USER_TOKEN`: This environment variable represents the token used for authorization when sending the reviews.
+12. `WORKFLOW_FILE_PATH`: The path to your GitHub Actions workflow file. Default value is `.github/workflows/ci.js.yml`. Update this if you use a different path or file name for your workflow.
 
 > Note: You need to specify USER_PROMPT and ROLE_PROMPT mandatorily unless you provide a SYSTEM_PROMPT.
 
 ## How to Set Environment Variables
 
 In GitHub Actions, you can set environment variables for a specific step in your workflow file (.github/workflows/workflow.yml). Here's an example:
+
+> Note: Use `|` (Literal Block Scalar) intsead of `>`  (Folded Block Scalar) when writing the multiple line prompts to avoid mangling.
 
 ```yaml
 name: "English Language Course L1 | Auto Grade"
@@ -54,7 +57,7 @@ jobs:
         uses: pupilfirst/ai-review-action@v1
         env:
           ROLE_PROMPT: "You are an advanced English Language Teaching Assistant AI. Your task involves reviewing and providing feedback on student submissions, paying meticulous attention to grammar, punctuation, and style errors."
-          USER_PROMPT: >
+          USER_PROMPT: |
             The conversation should include the following:
             - The specific Discord channel the conversation takes place in.
             - The initial question, marked with "Student: ", outlining the student's doubt.
@@ -85,6 +88,13 @@ jobs:
           status: "success"
           description: AI has reviewed the submission successfully
 ```
+
+## Things to be taken care while running the action locally
+
+1. cp example.env .env
+
+2. Update the values in .env file.
+
 
 ## Releasing a new version
 
