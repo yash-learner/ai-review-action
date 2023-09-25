@@ -5,14 +5,20 @@ class OpenAIClient
   def initialize
     @client = OpenAI::Client.new
 
-    content = YAML.safe_load(File.read(ENV.fetch('WORKFLOW_FILE_PATH', './.github/workflows/ci.js.yml')))
-    @config = content.dig('jobs', 'test', 'steps').find do |step|
-      ( step['uses']&.include?('pupilfirst/ai-review-action') || step['id']&.include?('ai-review') )
-    end.fetch('with', {})
-
+    @config = extract_relevant_step_configuration
     @model = @config.fetch('OPEN_AI_MODEL', "gpt-3.5-turbo")
     @temperature = @config.fetch('OPEN_AI_TEMPERATURE', 0.1).to_f
     @system_prompt = @config.fetch('SYSTEM_PROMPT', system_prompt_default)
+  end
+
+  def extract_relevant_step_configuration
+    # Load workflow YAML file from the path specified in the environment variable or the default path.
+    file_path = ENV.fetch('WORKFLOW_FILE_PATH', './.github/workflows/ci.js.yml')
+    # Find the job step that uses 'pupilfirst/ai-review-action' or has an ID containing 'ai-review'.
+    content = YAML.safe_load(File.read(file_path))
+    @config = content.dig('jobs', 'test', 'steps').find do |step|
+      ( step['uses']&.include?('pupilfirst/ai-review-action') || step['id']&.include?('ai-review') )
+    end.fetch('with', {})
   end
 
   def ask
