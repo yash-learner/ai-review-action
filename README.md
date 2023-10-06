@@ -29,7 +29,7 @@ The application uses the following environment variables for configuration:
 
 In GitHub Actions, you can set environment variables for a specific step in your workflow file (.github/workflows/workflow.yml). Here's an example:
 
-> Note: Use `|` (Literal Block Scalar) intsead of `>`  (Folded Block Scalar) when writing the multiple line prompts to avoid mangling.
+> Note: Use `|` (Literal Block Scalar) intsead of `>` (Folded Block Scalar) when writing prompts spanning multiple lines (see `USER_PROMPT` in the example below).
 
 ```yaml
 name: "English Language Course L1 | Auto Grade"
@@ -94,7 +94,6 @@ jobs:
 1. cp example.env .env
 
 2. Update the values in .env file.
-
 
 ## Releasing a new version
 
