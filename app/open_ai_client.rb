@@ -14,11 +14,21 @@ class OpenAIClient
   def extract_relevant_step_configuration
     # Load workflow YAML file from the path specified in the environment variable or the default path.
     file_path = ENV.fetch('WORKFLOW_FILE_PATH', './.github/workflows/ci.js.yml')
+
     # Find the job step that uses 'pupilfirst/ai-review-action' or has an ID containing 'ai-review'.
     content = YAML.safe_load(File.read(file_path))
+
     @config = content.dig('jobs', 'test', 'steps').find do |step|
       ( step['uses']&.include?('pupilfirst/ai-review-action') || step['id']&.include?('ai-review') )
-    end.fetch('env', {})
+    end['env']
+
+    if @config.nil?
+      p content
+
+      raise 'Could not read configuration from environment variables. Please check the workflow file.'
+    end
+
+    @config
   end
 
   def ask
