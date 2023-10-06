@@ -86,15 +86,16 @@ INPUT_PROMPT
 
   def default_output_prompt
 <<-OUTPUT_PROMPT
-Please provide your response in the following JSON format (adhere to the format strictly):
+Please provide your response in the following JSON format. Adhere to the format strictly and escape all line-breaks within strings using \\\\n.
 
 ```json
 {
     "status": "\"passed\" or \"failed\"",
-    "feedback": "Detailed feedback for the student in markdown format. Aim for a human-like explanation as much as possible. Make sure that line-breaks are escaped correctly for this JSON response."
+    "feedback": "Detailed feedback for the student in markdown format. Aim for a human-like explanation as much as possible."
 }
 ```
-If the student submission is not related to question share a genric feedback
+
+If the student submission is not related to question, share generic feedback.
 OUTPUT_PROMPT
   end
 end
