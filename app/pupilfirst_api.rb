@@ -33,7 +33,7 @@ module PupilfirstAPI
     end
 
     def grade(result)
-      return puts 'Skipped grading' unless valid_status?(result['status'])
+      return puts "Unknown status: #{result['status'].inspect}. Skipping grading..." unless valid_status?(result['status'])
 
       variables = {
         submissionId: @submission.id,
@@ -42,11 +42,14 @@ module PupilfirstAPI
         feedback: result['feedback']
       }
 
-      puts "variables: #{variables}" if @test_mode
+      puts "[TEST MODE] Variables: #{variables.inspect}" if @test_mode
 
       create_grading(variables) unless @test_mode
     rescue StandardError => e
-      puts e
+      puts "An unexpected error occurred. Skipping grading..."
+      puts "Error class/type: #{e.class}"
+      puts "Error message: #{e.message}"
+      puts "Backtrace: #{e.backtrace[0..5].join("\n")}"
     end
 
     private
@@ -70,6 +73,7 @@ module PupilfirstAPI
 
     def create_grading(variables)
       result = API::Client.query(GradeMutation, variables: variables)
+
       if result.data
         puts result.data.create_grading.success
       else
