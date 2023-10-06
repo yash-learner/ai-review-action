@@ -18,7 +18,7 @@ class OpenAIClient
     content = YAML.safe_load(File.read(file_path))
     @config = content.dig('jobs', 'test', 'steps').find do |step|
       ( step['uses']&.include?('pupilfirst/ai-review-action') || step['id']&.include?('ai-review') )
-    end.fetch('with', {})
+    end.fetch('env', {})
   end
 
   def ask
