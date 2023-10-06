@@ -91,7 +91,7 @@ Please provide your response in the following JSON format (adhere to the format 
 ```json
 {
     "status": "\"passed\" or \"failed\"",
-    "feedback": "Detailed feedback for the student in markdown format. Aim for a human-like explanation as much as possible"
+    "feedback": "Detailed feedback for the student in markdown format. Aim for a human-like explanation as much as possible. Make sure that line-breaks are escaped correctly for this JSON response."
 }
 ```
 If the student submission is not related to question share a genric feedback
