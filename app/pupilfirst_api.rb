@@ -59,7 +59,7 @@ module PupilfirstAPI
       handle_error(e)
     end
 
-    def create_feedback(result)
+    def add_feedback(result)
       variables = {
         submissionId: @submission.id,
         feedback: result['feedback']
