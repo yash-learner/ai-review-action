@@ -23,4 +23,9 @@ def generate_response
     end
 end
 
-PupilfirstAPI::Grader.new.grade(generate_response)
+if ENV.fetch("SKIP_GRADING", "false") == "true"
+    PupilfirstAPI::Grader.new.create_feedback(generate_response)
+else
+    puts "Grading..."
+    PupilfirstAPI::Grader.new.grade(generate_response)
+end

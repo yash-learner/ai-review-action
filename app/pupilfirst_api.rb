@@ -26,6 +26,14 @@ module PupilfirstAPI
     }
   GRAPHQL
 
+  CreateFeedbackMutation = API::Client.parse <<-'GRAPHQL'
+    mutation($submissionId: ID!, $feedback: String) {
+      createFeedback(submissionId: $submissionId, feedback: $feedback) {
+        success
+      }
+    }
+  GRAPHQL
+
   class Grader
     def initialize(submission = Submission.new)
       @submission = submission
@@ -40,19 +48,27 @@ module PupilfirstAPI
         checklist: @submission.checklist,
         feedback: result['feedback']
       }
+
       grades = grades_based_on(result['status'])
-      if grades.length > 0
-        variables[:grades] = grades
-      end
 
-      puts "[TEST MODE] Variables: #{variables.inspect}" if @test_mode
+      variables[:grades] = grades if grades.length > 0
 
+      log_variables(variables) if @test_mode
       create_grading(variables) unless @test_mode
     rescue StandardError => e
-      puts "An unexpected error occurred. Skipping grading..."
-      puts "Error class/type: #{e.class}"
-      puts "Error message: #{e.message}"
-      puts "Backtrace: #{e.backtrace[0..5].join("\n")}"
+      handle_error(e)
+    end
+
+    def create_feedback(result)
+      variables = {
+        submissionId: @submission.id,
+        feedback: result['feedback']
+      }
+
+      log_variables(variables) if @test_mode
+      create_feedback(variables) unless @test_mode
+    rescue StandardError => e
+      handle_error(e)
     end
 
     private
@@ -74,6 +90,10 @@ module PupilfirstAPI
       end
     end
 
+    def log_variables(variables)
+      puts "[TEST MODE] Variables: #{variables.inspect}"
+    end
+
     def create_grading(variables)
       result = API::Client.query(GradeMutation, variables: variables)
 
@@ -82,6 +102,23 @@ module PupilfirstAPI
       else
         puts result.errors["data"]
       end
+    end
+
+    def create_feedback(variables)
+      result = API::Client.query(CreateFeedbackMutation, variables: variables)
+
+      if result.data
+        puts result.data.create_feedback.success
+      else
+        puts result.errors["data"]
+      end
+    end
+
+    def handle_error(e)
+      puts "An unexpected error occurred. Skipping grading..."
+      puts "Error class/type: #{e.class}"
+      puts "Error message: #{e.message}"
+      puts "Backtrace: #{e.backtrace[0..5].join("\n")}"
     end
   end
 end
