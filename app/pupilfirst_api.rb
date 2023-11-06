@@ -27,7 +27,7 @@ module PupilfirstAPI
   GRAPHQL
 
   CreateFeedbackMutation = API::Client.parse <<-'GRAPHQL'
-    mutation($submissionId: ID!, $feedback: String) {
+    mutation($submissionId: ID!, $feedback: String!) {
       createFeedback(submissionId: $submissionId, feedback: $feedback) {
         success
       }
