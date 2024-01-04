@@ -36,6 +36,7 @@ class OpenAIClient
     response = @client.chat(
         parameters: {
             model: @model,
+            response_format: {type: "json_object"},
             messages: [
                 { role: "system", content: prompt }
             ],
