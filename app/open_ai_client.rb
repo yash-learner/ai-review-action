@@ -146,7 +146,6 @@ class OpenAIClient
       }
     )
     puts response
-    # response.dig("choices", 0, "message", "content")
     response.dig("choices", 0, "message", "tool_calls", 0, "function", "arguments")
   end
 
@@ -192,7 +191,6 @@ class OpenAIClient
     <<~INPUT_PROMPT
       The student's submissions will be an array of objects following the provided schema:
 
-
       {
         "kind": "The type of answer - can be shortText, longText, link, files, or multiChoice",
         "title": "The question that was asked of the student",
@@ -204,14 +202,18 @@ class OpenAIClient
   end
 
   def default_evaluation_criteria_prompt
-    <<~EC_PROMPT
-      The following is array of objects. Each object has two keys
-        - evaluation_criteria_id: This key stores the identifier for the evaluation criteria, which can be either a numeric value or a string. This identifier is unique for each set of criteria and is used to reference the specific evaluation criteria being described.
-        - allowed_grades": Associated with this key is an array of integers, which represents the set of permissible grades for associated evaluation criterion(evaluation_criteria_id). These grades are predefined and indicate the possible outcomes or ratings that can be assigned based on the evaluation criterion.
+    if ENV.fetch("ASSIGN_GRADES", "false") == "true"
+      <<~EC_PROMPT
+        The following is array of objects. Each object has two keys
+          - evaluation_criteria_id: This key stores the identifier for the evaluation criteria, which can be either a numeric value or a string. This identifier is unique for each set of criteria and is used to reference the specific evaluation criteria being described.
+          - allowed_grades": Associated with this key is an array of integers, which represents the set of permissible grades for associated evaluation criterion(evaluation_criteria_id). These grades are predefined and indicate the possible outcomes or ratings that can be assigned based on the evaluation criterion.
 
-        The evaluation_criteria for this submission are:
-          ${SUBMISSION_EC}
-    EC_PROMPT
+          The evaluation_criteria for this submission are:
+            ${SUBMISSION_EC}
+      EC_PROMPT
+    else
+      ""
+    end
   end
 
   def default_output_prompt

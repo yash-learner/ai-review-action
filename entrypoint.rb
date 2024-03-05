@@ -15,15 +15,16 @@ def generate_response
   @generate_response ||=
     begin
       JSON.parse(OpenAIClient.new.ask)
-    rescue => exception
+    rescue exception
       {
         status: "skip",
-        feedback: "Failure message"
+        feedback: exception
       }
     end
 end
 
 if ENV.fetch("SKIP_GRADING", "false") == "true"
+  puts "Adding feedback..."
   PupilfirstAPI::Grader.new.add_feedback(generate_response)
 else
   puts "Grading..."
