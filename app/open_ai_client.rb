@@ -89,9 +89,9 @@ class OpenAIClient
                         type: "integer",
                         description: "The grade value choosen from available grades for a evaluatuionCriterionID"
                       }
-                    },
-                    required: ["evaluationCriterionId", "grade"]
-                  }
+                    }
+                  },
+                  required: ["evaluationCriterionId", "grade"]
                 }
               }
             },
