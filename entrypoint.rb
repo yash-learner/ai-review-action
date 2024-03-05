@@ -15,7 +15,7 @@ def generate_response
   @generate_response ||=
     begin
       JSON.parse(OpenAIClient.new.ask)
-    rescue exception
+    rescue => exception
       {
         status: "skip",
         feedback: exception

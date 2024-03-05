@@ -23,14 +23,17 @@ The application uses the following environment variables for configuration:
 11. `REVIEW_BOT_USER_TOKEN`: This environment variable represents the token used for authorization when sending the reviews.
 12. `WORKFLOW_FILE_PATH`: The path to your GitHub Actions workflow file. Default value is `.github/workflows/ci.js.yml`. Update this if you use a different path or file name for your workflow.
 13. `SKIP_GRADING`: If set to `true`, the action will only create a feedback in the LMS and not send a review to the review endpoint. Default value is `false`.
+14. `ASSIGN_GRADES`: Setting this to `true` enables the action to assign a specific grade to each submission. Without this setting enabled, submissions will automatically receive either the maximum grade or be rejected, according to the evaluation criteria. Default value is `false`.
 
-> Note: You need to specify USER_PROMPT and ROLE_PROMPT mandatorily unless you provide a SYSTEM_PROMPT.
+> [!NOTE]
+> You need to specify USER_PROMPT and ROLE_PROMPT mandatorily unless you provide a SYSTEM_PROMPT.
 
 ## How to Set Environment Variables
 
 In GitHub Actions, you can set environment variables for a specific step in your workflow file (.github/workflows/workflow.yml). Here's an example:
 
-> Note: Use `|` (Literal Block Scalar) intsead of `>` (Folded Block Scalar) when writing prompts spanning multiple lines (see `USER_PROMPT` in the example below).
+> [!CAUTION]
+> Use `|` (Literal Block Scalar) intsead of `>` (Folded Block Scalar) when writing prompts spanning multiple lines (see `USER_PROMPT` in the example below).
 
 ```yaml
 name: "English Language Course L1 | Auto Grade"
@@ -57,6 +60,7 @@ jobs:
         id: ai-review
         uses: pupilfirst/ai-review-action@v1
         env:
+          OPEN_AI_MODEL: gpt-4-turbo-preview
           ROLE_PROMPT: "You are an advanced English Language Teaching Assistant AI. Your task involves reviewing and providing feedback on student submissions, paying meticulous attention to grammar, punctuation, and style errors."
           USER_PROMPT: |
             The conversation should include the following:
