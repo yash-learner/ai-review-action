@@ -93,9 +93,9 @@ class OpenAIClient
                     required: ["evaluationCriterionId", "grade"]
                   }
                 }
-              },
-              required: ["status", "feedback", "grades"]
-            }
+              }
+            },
+            required: ["status", "feedback", "grades"]
           }
         }
       }
