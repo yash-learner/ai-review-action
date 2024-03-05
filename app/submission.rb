@@ -1,10 +1,10 @@
 class Submission
   def initialize
-    @submission_data = JSON.parse(File.read('./submission.json'))
+    @submission_data = JSON.parse(File.read("./submission.json"))
   end
 
   def id
-    @submission_data['id']
+    @submission_data["id"]
   end
 
   def data
@@ -17,5 +17,11 @@ class Submission
 
   def evaluation_criteria
     @submission_data["target"]["evaluation_criteria"]
+  end
+
+  def evaluation_criteria_ids
+    @submission_data["target"]["evaluation_criteria"].map do |criteria|
+      criteria["id"]
+    end
   end
 end
