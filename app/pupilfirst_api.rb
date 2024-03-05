@@ -77,15 +77,15 @@ module PupilfirstAPI
     end
 
     def grades_based_on(result)
-      if result["status"] == "accepted"
+      if result["status"] == "accepted" && ENV.fetch("ASSIGN_GRADES", "false") == "true"
+        result["grades"]
+      elsif result["status"] == "accepted"
         @submission.evaluation_criteria.map do |criteria|
           {
             evaluationCriterionId: criteria["id"],
             grade: criteria["max_grade"]
           }
         end
-      elsif result["status"] == "accepted" && ENV.fetch("ASSIGN_GRADES", "false") == "true"
-        result["grades"]
       else
         []
       end

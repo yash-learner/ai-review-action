@@ -85,10 +85,11 @@ class OpenAIClient
                     evaluationCriterionId: {
                       type: "string",
                       enum: Submission.new.evaluation_criteria_ids,
-                      grade: {
-                        type: "integer",
-                        description: "The grade value choosen from available grades for a evaluatuionCriterionID"
-                      }
+                      description: "The Id of evaluation criteria"
+                    },
+                    grade: {
+                      type: "integer",
+                      description: "The grade value choosen from allowed grades array for choosen evaluatuion_criterion_id for a submission based on quality"
                     }
                   },
                   required: ["evaluationCriterionId", "grade"]
@@ -206,7 +207,7 @@ class OpenAIClient
     <<~EC_PROMPT
       The following is array of objects. Each object has two keys
         - evaluation_criteria_id: This key stores the identifier for the evaluation criteria, which can be either a numeric value or a string. This identifier is unique for each set of criteria and is used to reference the specific evaluation criteria being described.
-        - llowed_grades": Associated with this key is an array of integers, which represents the set of permissible grades for associated evaluation criterion(evaluation_criteria_id). These grades are predefined and indicate the possible outcomes or ratings that can be assigned based on the evaluation criterion.
+        - allowed_grades": Associated with this key is an array of integers, which represents the set of permissible grades for associated evaluation criterion(evaluation_criteria_id). These grades are predefined and indicate the possible outcomes or ratings that can be assigned based on the evaluation criterion.
 
         The evaluation_criteria for this submission are:
           ${SUBMISSION_EC}
@@ -215,12 +216,10 @@ class OpenAIClient
 
   def default_output_prompt
     <<~OUTPUT_PROMPT
-      {
-          "status": ""accepted" or "rejected"",
-          "feedback": "Detailed feedback for the student in markdown format. Aim for a human-like explanation as much as possible."
-      }
+      The following is the expected json schema for the response.
+        #{function}
 
-      If the student submission is not related to question, share generic feedback.
+        If the student submission is not related to question, share generic feedback.
     OUTPUT_PROMPT
   end
 end
