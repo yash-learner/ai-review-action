@@ -4,6 +4,7 @@ require "pry"
 require_relative "app/open_ai_client"
 require_relative "app/submission"
 require_relative "app/pupilfirst_api"
+require_relative "app/reviewer"
 
 OpenAI.configure do |config|
   config.access_token = ENV.fetch("OPENAI_ACCESS_TOKEN")
