@@ -40,12 +40,12 @@ module PupilfirstAPI
     end
 
     def grade(result)
-      return puts "Unknown status: #{result["status"].inspect}. Skipping grading..." unless valid_status?(result["status"])
+      return puts "Unknown status: #{result[:status].inspect}. Skipping grading..." unless valid_status?(result[:status])
 
       variables = {
         submissionId: @submission.id,
         checklist: @submission.checklist,
-        feedback: result["feedback"]
+        feedback: result[:feedback]
       }
 
       grades = grades_based_on(result)
@@ -61,7 +61,7 @@ module PupilfirstAPI
     def add_feedback(result)
       variables = {
         submissionId: @submission.id,
-        feedback: result["feedback"]
+        feedback: result[:feedback]
       }
 
       log_variables(variables) if @test_mode
@@ -77,15 +77,8 @@ module PupilfirstAPI
     end
 
     def grades_based_on(result)
-      if result["status"] == "accepted" && ENV.fetch("ASSIGN_GRADES", "false") == "true"
-        result["grades"]
-      elsif result["status"] == "accepted"
-        @submission.evaluation_criteria.map do |criteria|
-          {
-            evaluationCriterionId: criteria["id"],
-            grade: criteria["max_grade"]
-          }
-        end
+      if result[:status] == "accepted"
+        result[:grades]
       else
         []
       end

@@ -1,5 +1,6 @@
 require "openai"
 require "yaml"
+require "json"
 
 class OpenAIClient
   def initialize
@@ -9,6 +10,7 @@ class OpenAIClient
     @model = @config.fetch("OPEN_AI_MODEL", "gpt-3.5-turbo")
     @temperature = @config.fetch("OPEN_AI_TEMPERATURE", 0.1).to_f
     @system_prompt = @config.fetch("SYSTEM_PROMPT", system_prompt_default)
+    @submission = Submission.new
   end
 
   def extract_relevant_step_configuration
@@ -31,108 +33,6 @@ class OpenAIClient
     @config
   end
 
-  def create_feedback_function
-    {
-      type: "function",
-      function: {
-        name: "create_feedback",
-        description: "Creates feedback for a student submission",
-        parameters: {
-          type: "object",
-          properties: {
-            feedback: {
-              type: "string",
-              description: "The feedback to be added to a student submission"
-            }
-          },
-          required: ["feedback"]
-        }
-      }
-    }
-  end
-
-  def allowed_grades
-    evaluation_criteria = Submission.new.evaluation_criteria
-    evaluation_criteria.map do |criteria|
-      {evaluation_criteria_id: criteria["id"], allowed_grades: (1..criteria["max_grade"]).to_a}.to_json
-    end
-  end
-
-  def create_grading_function
-    assign_grades = ENV.fetch("ASSIGN_GRADES", "false") == "true"
-    if assign_grades
-      {
-        type: "function",
-        function: {
-          name: "create_grading",
-          description: "Creates grading for a student submission",
-          parameters: {
-            type: "object",
-            properties: {
-              status: {
-                type: "string",
-                enum: ["accepted", "rejected"]
-              },
-              feedback: {
-                type: "string",
-                description: "The feedback to be added to a student submission"
-              },
-              grades: {
-                type: "array",
-                items: {
-                  type: "object",
-                  properties: {
-                    evaluationCriterionId: {
-                      type: "string",
-                      enum: Submission.new.evaluation_criteria_ids,
-                      description: "The Id of evaluation criteria"
-                    },
-                    grade: {
-                      type: "integer",
-                      description: "The grade value choosen from allowed grades array for choosen evaluatuion_criterion_id for a submission based on quality"
-                    }
-                  },
-                  required: ["evaluationCriterionId", "grade"]
-                }
-              }
-            },
-            required: ["status", "feedback", "grades"]
-          }
-        }
-      }
-    else
-      {
-        type: "function",
-        function: {
-          name: "create_grading",
-          description: "Creates grading for a student submission",
-          parameters: {
-            type: "object",
-            properties: {
-              status: {
-                type: "string",
-                enum: ["accepted", "rejected"]
-              },
-              feedback: {
-                type: "string",
-                description: "The feedback to be added to a student submission"
-              }
-            },
-            required: ["feedback"]
-          }
-        }
-      }
-    end
-  end
-
-  def function
-    if ENV.fetch("SKIP_GRADING", "false") == "true"
-      create_feedback_function
-    else
-      create_grading_function
-    end
-  end
-
   def ask
     puts prompt
     response = @client.chat(
@@ -141,24 +41,27 @@ class OpenAIClient
         messages: [
           {role: "system", content: prompt}
         ],
-        tools: Reviewer.avilable_actions,
+        tools: Reviewer.new.available_tools,
         temperature: @temperature
       }
     )
     puts response
-    if message["role"] == "assistant" && message["function_call"]
-      function_name = message.dig("function_call", "name")
-      args =
-        JSON.parse(
-          message.dig("function_call", "arguments"),
-          { symbolize_names: true },
-        )
 
-        {function_name: function_name, arges: args}
+    message = response.dig("choices", 0, "message")
+    if message["role"] == "assistant" && message["tool_calls"]
+      message["tool_calls"].each do |tool_call|
+        function_name = tool_call.dig("function", "name")
+        args_json = tool_call.dig("function", "arguments")
+        begin
+          args = JSON.parse(args_json, symbolize_names: true)
+          return {function_name: function_name, args: args}
+        rescue JSON::ParserError => e
+          puts "Error parsing JSON arguments: #{e.message}"
+        end
+      end
     else
       {function_name: "errored", args: {}}
     end
-
   end
 
   def prompt
@@ -166,10 +69,9 @@ class OpenAIClient
       .gsub("${ROLE_PROMPT}", default_role_prompt)
       .gsub("${INPUT_DESCRIPTION}", default_input_prompt)
       .gsub("${USER_PROMPT}", default_user_prompt)
-      .gsub("${SUBMISSION}", "#{Submission.new.checklist}")
+      .gsub("${SUBMISSION}", "#{@submission.checklist}")
       .gsub("${EC_PROMPT}", default_evaluation_criteria_prompt)
-      .gsub("${SUBMISSION_EC}", "#{allowed_grades}")
-      .gsub("${OUTPUT_DESCRIPTION}", default_output_prompt)
+      .gsub("${SUBMISSION_EC}", "#{@submission.evaluation_criteria}")
   end
 
   def system_prompt_default
@@ -181,8 +83,6 @@ class OpenAIClient
       #{@config.fetch("USER_PROMPT", "${USER_PROMPT}")}
 
       #{@config.fetch("EC_PROMPT", "${EC_PROMPT}")}
-
-      #{@config.fetch("OUTPUT_DESCRIPTION", "${OUTPUT_DESCRIPTION}")}
     SYSTEM_PROMPT
   end
 
@@ -214,26 +114,19 @@ class OpenAIClient
   end
 
   def default_evaluation_criteria_prompt
-    if ENV.fetch("ASSIGN_GRADES", "false") == "true"
+    if @submission.evaluation_criteria.present?
       <<~EC_PROMPT
-        The following is array of objects. Each object has two keys
-          - evaluation_criteria_id: This key stores the identifier for the evaluation criteria, which can be either a numeric value or a string. This identifier is unique for each set of criteria and is used to reference the specific evaluation criteria being described.
-          - allowed_grades": Associated with this key is an array of integers, which represents the set of permissible grades for associated evaluation criterion(evaluation_criteria_id). These grades are predefined and indicate the possible outcomes or ratings that can be assigned based on the evaluation criterion.
+        The following is array of objects. Each object has following keys
+          - id: This key stores the identifier for the evaluation criteria, which can be either a numeric value or a string.
+          - name: The name of the evaluation criterion.
+          - max_grade: The maximum grade that can be assigned for this criterion.
+          - grade_labels: An array of objects, each containing a 'grade' and a 'label'. 'grade' is an integer representing a possible grade for the criterion, and 'label' is a description of what this grade signifies.
 
-          The evaluation_criteria for this submission are:
+          The evaluation_criteria's for this submission are:
             ${SUBMISSION_EC}
       EC_PROMPT
     else
       ""
     end
-  end
-
-  def default_output_prompt
-    <<~OUTPUT_PROMPT
-      The following is the expected json schema for the response.
-        #{function}
-
-        If the student submission is not related to question, share generic feedback.
-    OUTPUT_PROMPT
   end
 end
