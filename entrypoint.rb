@@ -12,7 +12,7 @@ OpenAI.configure do |config|
 end
 
 def generate_response
-  @generate_response ||= OpenAIClient.new.ask
+  generate_response = OpenAIClient.new.ask
 
   case generate_response[:function_name]
   when "create_grading"
