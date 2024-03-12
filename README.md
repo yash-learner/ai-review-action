@@ -22,11 +22,11 @@ The application uses the following environment variables for configuration:
 10. `REVIEW_END_POINT`: This environment variable specifies the URL of the endpoint where the reviews are sent.
 11. `REVIEW_BOT_USER_TOKEN`: This environment variable represents the token used for authorization when sending the reviews.
 12. `WORKFLOW_FILE_PATH`: The path to your GitHub Actions workflow file. Default value is `.github/workflows/ci.js.yml`. Update this if you use a different path or file name for your workflow.
-13. `SKIP_GRADING`: If set to `true`, the action will only create a feedback in the LMS and not send a review to the review endpoint. Default value is `false`.
-14. `ASSIGN_GRADES`: Setting this to `true` enables the action to assign a specific grade to each submission. Without this setting enabled, submissions will automatically receive either the maximum grade or be rejected, according to the evaluation criteria. Default value is `false`.
+13. `SKIP_GRADING`: If set to `true`, the action will only create a feedback in the LMS and not send a review to the review endpoint. Default value is `false`. Supported only in v1 of the action.
 
 > [!NOTE]
 > You need to specify USER_PROMPT and ROLE_PROMPT mandatorily unless you provide a SYSTEM_PROMPT.
+> V2 of the action does not require `SKIP_GRADING`. It will choose appropriate action based on the prompt provided.
 
 ## How to Set Environment Variables
 
