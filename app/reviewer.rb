@@ -45,11 +45,11 @@ class Reviewer
                   evaluationCriterionId: {
                     type: "string",
                     enum: Submission.new.evaluation_criteria_ids,
-                    description: "The Id of evaluation criteria"
+                    description: "The Id of evaluation criteria. This should be one of the evaluation criteria Ids of the submission."
                   },
                   grade: {
                     type: "integer",
-                    description: "The grade value choosen from allowed grades array for choosen evaluatuion_criterion_id for a submission based on quality"
+                    description: "The grade value choosen for the evaluation criteria. This should be between 0 and the max_grade of the evaluation criteria."
                   }
                 },
                 required: ["evaluationCriterionId", "grade"]

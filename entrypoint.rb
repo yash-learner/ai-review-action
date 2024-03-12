@@ -34,4 +34,8 @@ rescue => e
   end
 end
 
-generate_response
+if ENV.fetch("TEST_MODE", "false") == "true"
+  puts "Running in test mode. Skipping API calls."
+else
+  generate_response
+end
