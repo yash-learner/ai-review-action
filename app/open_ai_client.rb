@@ -141,12 +141,24 @@ class OpenAIClient
         messages: [
           {role: "system", content: prompt}
         ],
-        tools: [function],
+        tools: Reviewer.avilable_actions,
         temperature: @temperature
       }
     )
     puts response
-    response.dig("choices", 0, "message", "tool_calls", 0, "function", "arguments")
+    if message["role"] == "assistant" && message["function_call"]
+      function_name = message.dig("function_call", "name")
+      args =
+        JSON.parse(
+          message.dig("function_call", "arguments"),
+          { symbolize_names: true },
+        )
+
+        {function_name: function_name, arges: args}
+    else
+      {function_name: "errored", args: {}}
+    end
+
   end
 
   def prompt

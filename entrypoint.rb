@@ -12,6 +12,7 @@ OpenAI.configure do |config|
 end
 
 def generate_response
+  # {function_name, args}
   @generate_response ||=
     begin
       JSON.parse(OpenAIClient.new.ask)
@@ -21,6 +22,11 @@ def generate_response
         feedback: exception
       }
     end
+end
+
+case @generate_response.function_name
+when "review"
+  PupilfirstAPI::Grader.new.grade(generate_response)
 end
 
 if ENV.fetch("SKIP_GRADING", "false") == "true"
