@@ -15,7 +15,7 @@ def generate_response
   @generate_response ||= OpenAIClient.new.ask
 
   case generate_response[:function_name]
-  when "grade"
+  when "create_grading"
     PupilfirstAPI::Grader.new.grade(generate_response[:args])
   when "create_feedback"
     PupilfirstAPI::Grader.new.add_feedback(generate_response[:args])

@@ -19,7 +19,7 @@ class Reviewer
     }
   end
 
-  def grade
+  def create_grading
     {
       type: "function",
       function: {
@@ -63,6 +63,6 @@ class Reviewer
   end
 
   def available_tools
-    [create_feedback, grade]
+    [create_feedback, create_grading]
   end
 end
