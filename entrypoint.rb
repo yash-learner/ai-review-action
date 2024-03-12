@@ -20,3 +20,5 @@ def generate_response
     PupilfirstAPI::Grader.new.add_feedback(generate_response[:args])
   end
 end
+
+generate_response
