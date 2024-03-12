@@ -114,7 +114,7 @@ class OpenAIClient
   end
 
   def default_evaluation_criteria_prompt
-    if @submission.evaluation_criteria.present?
+    if @submission.evaluation_criteria.any?
       <<~EC_PROMPT
         The following is array of objects. Each object has following keys
           - id: This key stores the identifier for the evaluation criteria, which can be either a numeric value or a string.
