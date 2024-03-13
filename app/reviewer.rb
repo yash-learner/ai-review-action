@@ -4,7 +4,7 @@ class Reviewer
       type: "function",
       function: {
         name: "create_feedback",
-        description: "Creates feedback for a student submission",
+        description: "Creates feedback for a student submission. These submissions are not graded, only feedback is provided.",
         parameters: {
           type: "object",
           properties: {
@@ -24,7 +24,7 @@ class Reviewer
       type: "function",
       function: {
         name: "create_grading",
-        description: "Creates grading for a student submission",
+        description: "Creates grading for a student submission, These submissions has to be accepted or rejected. If accepted, grades for the evaluation criteria has to be provided. If rejected, grades will be empty.",
         parameters: {
           type: "object",
           properties: {
@@ -38,7 +38,7 @@ class Reviewer
             },
             grades: {
               type: "array",
-              description: "The grades to be added to a student submission. This will be an empty array when a submission is rejected",
+              description: "The grades to be added to a student submission. This will be an empty array when a submission is rejected.",
               items: {
                 type: "object",
                 properties: {
@@ -49,7 +49,7 @@ class Reviewer
                   },
                   grade: {
                     type: "integer",
-                    description: "The grade value choosen for the evaluation criteria. This should be between 0 and the max_grade of the evaluation criteria."
+                    description: "The grade value choosen for the evaluation criteria. This should be between 1 and the max_grade of the evaluation criteria."
                   }
                 },
                 required: ["evaluationCriterionId", "grade"]
