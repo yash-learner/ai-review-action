@@ -21,31 +21,28 @@ jobs:
         id: ai-review
         uses: ./
         env:
-          ROLE_PROMPT: "You are an advanced English Language Teaching Assistant AI. Your task involves reviewing and providing feedback on student submissions, paying meticulous attention to grammar, punctuation, and style errors."
+          ROLE_PROMPT: "You are an advanced English Language Teaching Assistant AI. Your task involves evaluating student submission, paying meticulous attention to grammar, punctuation, and style errors."
           USER_PROMPT: |
-            The student submission for conversation should include the following:
+            The student submission is on Writing up a conversation between student and an instructor at Pupilfirst with at least 200 words.
             - The specific Discord channel the conversation takes place in.
             - The initial question, marked with "Student: ", outlining the student's doubt.
             - The instructor's response, labelled with "Instructor: ", that provides a solution.
             - A follow-up question for clarification, again starting with "Student: ", to delve into what the instructor meant.
 
-            Ensure that the student applies the lessons they learned in the current level:
-            - Provide context, steps taken, and error messages for both the initial question and the follow-up.
-            - Frame questions around the "why" and "how" aspects.
-            - Ask for additional examples, if necessary.
-            - Thank the instructor in a proper and considerate manner.
+            When looking at the student's submission, you should check for the following requirements:
+            - Provided the context, steps taken, and error messages for both the initial question and the follow-up.
+            - Framed the questions around the "why" and "how" aspects.
+            - Asked for additional examples, if necessary.
+            - Wished the instructor in a proper and considerate manner.
 
-            Accept the submission with status as "accepted" grade as "1" for "Accepted" evaluation criterion if the student's submission meets the ideal conditions in all areas. Otherwise reject the submission with status as "rejected". Include feedback in both cases according to the feedback guidelines.
+           Make sure to identify and highlight all grammar, punctuation, and style errors.
 
-            The feedback for student submission should focus on the following areas (with the ideal condition in brackets):
-            1. Providing Context & Background (The student delivers clear and detailed context, steps taken, and error messages).
-            2. Clarity (The conversation is clear and easy to understand throughout).
-            3. Expressing Thanks (The student thanks the instructor genuinely and appropriately).
-            4. Appropriate Tone & Etiquette (The student maintains a professional and respectful tone throughout the conversation).
+            As per the above requirements, add a grading to your feedback.
+            Choose grade of submission as "1" for evaluation_criteria "Accepted".
+             - if the submission meets the ideal conditions in all areas.
 
-            Make sure to identify and highlight all grammar, punctuation, and style errors.
+            Choose the status as "rejected" and send empty [] for grades property
+             - if the submission does not meet the ideal conditions in all areas.
 
-            Call the create_grading function with status, grades and feedback as parameters to submit the review.
-
-            The following is the student submission:
+            The student's submission is:
             ${SUBMISSION}
