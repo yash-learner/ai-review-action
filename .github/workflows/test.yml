@@ -35,6 +35,8 @@ jobs:
             - Ask for additional examples, if necessary.
             - Thank the instructor in a proper and considerate manner.
 
+            Accept the submission with max grade if the student's submission meets the ideal conditions in all areas. Otherwise reject the submission with status rejected. Include feedback in both cases according to the feedback guidelines.
+
             The feedback for student submission should focus on the following areas (with the ideal condition in brackets):
             1. Providing Context & Background (The student delivers clear and detailed context, steps taken, and error messages).
             2. Clarity (The conversation is clear and easy to understand throughout).
@@ -43,8 +45,7 @@ jobs:
 
             Make sure to identify and highlight all grammar, punctuation, and style errors.
 
-            Accept the submission with max grade if the student's submission meets the ideal conditions in all areas. Otherwise reject the submission with status rejected. Include feedback in both cases according to the feedback guidelines.
+            Call the create_grading function call.
 
-            The student's submission will be as follows:
-
+            The following is the student submission:
             ${SUBMISSION}
