@@ -44,5 +44,5 @@ jobs:
             Choose the status as "rejected" and send empty [] for grades property
              - if the submission does not meet the ideal conditions in all areas.
 
-            The student's submission is:
-            ${SUBMISSION}
+           The student's submission is
+             ${SUBMISSION}
