@@ -10,7 +10,7 @@ class Reviewer
           properties: {
             feedback: {
               type: "string",
-              description: "The feedback for student submission in markdown."
+              description: "The feedback for student submission (in Markdown)."
             }
           },
           required: ["feedback"]
@@ -24,7 +24,7 @@ class Reviewer
       type: "function",
       function: {
         name: "create_grading",
-        description: "Creates grading for a student submission, These submissions has to be accepted or rejected. If accepted, grades for the evaluation criteria has to be provided. If rejected, grades will be empty.",
+        description: "Creates grading for a student submission, These submissions should be either accepted or rejected. If accepted, grades should be provided. If rejected, grades should be empty.",
         parameters: {
           type: "object",
           properties: {
@@ -34,22 +34,22 @@ class Reviewer
             },
             feedback: {
               type: "string",
-              description: "The feedback for student submission in markdown."
+              description: "The feedback for student submission (in Markdown)."
             },
             grades: {
               type: "array",
-              description: "The grades to be added to a student submission. This will be an empty array when a submission is rejected.",
+              description: "The grades to be added to a student submission. This should be an empty array when a submission is rejected. When a submission is accepted, this should contain array of objects with evaluationCriterionId and grade.",
               items: {
                 type: "object",
                 properties: {
                   evaluationCriterionId: {
                     type: "string",
                     enum: Submission.new.evaluation_criteria_ids,
-                    description: "The Id of evaluation criteria. This should be one of the evaluation criteria Ids of the submission."
+                    description: "The Id of an evaluation criterion. This should be one of the evaluation criteria Ids of the submission."
                   },
                   grade: {
                     type: "integer",
-                    description: "The grade value choosen for the evaluation criteria. This should be between 1 and the max_grade of the evaluation criteria."
+                    description: "The grade value choosen for an evaluation criterion. This should be between 1 and the max_grade of an evaluation criterion."
                   }
                 },
                 required: ["evaluationCriterionId", "grade"]

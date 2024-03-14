@@ -116,13 +116,13 @@ class OpenAIClient
   def default_evaluation_criteria_prompt
     if @submission.evaluation_criteria.any?
       <<~EC_PROMPT
-        The following is array of objects. Each object has following keys
+        The following describes an array of objects where each object represents an evaluation criterion for a submission. Each criterion object includes the following key attributes:
           - id: This key stores the identifier for the evaluation criteria, which can be either a numeric value or a string.
-          - name: The name of the evaluation criterion.
+          - name: The name of the evaluation criterion, describing the aspect of the submission it assesses.
           - max_grade: The maximum grade that can be assigned for this criterion.
           - grade_labels: An array of objects, each containing a 'grade' and a 'label'. 'grade' is an integer representing a possible grade for the criterion, and 'label' is a description of what this grade signifies.
 
-          The evaluation_criteria's for this submission are:
+          Below is the structured representation of the evaluation criteria for the current submission:
             ${SUBMISSION_EC}
       EC_PROMPT
     else

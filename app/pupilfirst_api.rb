@@ -48,6 +48,7 @@ module PupilfirstAPI
         feedback: result[:feedback]
       }
 
+      # We can use the value of the result[:grades] but we are using following method to handle the case when model hallucinates the grades for a rejected submission.
       grades = grades_based_on(result)
 
       variables[:grades] = grades if grades.length > 0

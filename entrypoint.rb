@@ -12,30 +12,30 @@ OpenAI.configure do |config|
 end
 
 def generate_response
-  retries = 0
-  generate_response = OpenAIClient.new.ask
+  attempts = 0
 
-  case generate_response[:function_name]
-  when "create_grading"
-    PupilfirstAPI::Grader.new.grade(generate_response[:args])
-  when "create_feedback"
-    PupilfirstAPI::Grader.new.add_feedback(generate_response[:args])
-  else
-    raise "Unknown response from OpenAI: #{generate_response}"
-  end
-rescue => e
-  retries += 1
-  if retries <= 1
-    puts "Attempting retry #{retries} due to error: #{e.message}."
-    retry
-  else
-    puts "Max retries reached. Exiting."
-    raise e
+  begin
+    attempts += 1
+    response = OpenAIClient.new.ask
+
+    case response[:function_name]
+    when "create_grading"
+      PupilfirstAPI::Grader.new.grade(response[:args])
+    when "create_feedback"
+      PupilfirstAPI::Grader.new.add_feedback(response[:args])
+    else
+      raise "Unknown response from OpenAI: #{response}"
+    end
+  rescue => e
+    puts "Attempt #{attempts} failed due to error: #{e.message}"
+    if attempts <= 1
+      puts "Retrying... Attempt #{attempts + 1}"
+      retry
+    else
+      puts "Max attempts reached. Exiting."
+      raise e
+    end
   end
 end
 
-if ENV.fetch("TEST_MODE", "false") == "true"
-  puts "Running in test mode. Skipping API calls."
-else
-  generate_response
-end
+generate_response
