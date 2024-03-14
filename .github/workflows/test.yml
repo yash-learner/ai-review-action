@@ -13,7 +13,7 @@ env:
   TEST_MODE: true
   WORKFLOW_FILE_PATH: ./.github/workflows/test.yml
 jobs:
-  test: # make sure the action works on a clean machine without building
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -35,7 +35,7 @@ jobs:
             - Asked for additional examples, if necessary.
             - Wished the instructor in a proper and considerate manner.
 
-           Make sure to identify and highlight all grammar, punctuation, and style errors.
+            Make sure to identify and highlight all grammar, punctuation, and style errors.
 
             As per the above requirements, add a grading to your feedback.
             Choose grade of submission as "1" for evaluation_criteria "Accepted".
@@ -44,5 +44,5 @@ jobs:
             Choose the status as "rejected" and send empty [] for grades property
              - if the submission does not meet the ideal conditions in all areas.
 
-           The student's submission is
+            The student's submission is
              ${SUBMISSION}
