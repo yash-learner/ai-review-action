@@ -23,7 +23,7 @@ jobs:
         env:
           ROLE_PROMPT: "You are an advanced English Language Teaching Assistant AI. Your task involves reviewing and providing feedback on student submissions, paying meticulous attention to grammar, punctuation, and style errors."
           USER_PROMPT: |
-            The conversation should include the following:
+            The student submission for conversation should include the following:
             - The specific Discord channel the conversation takes place in.
             - The initial question, marked with "Student: ", outlining the student's doubt.
             - The instructor's response, labelled with "Instructor: ", that provides a solution.
@@ -35,13 +35,15 @@ jobs:
             - Ask for additional examples, if necessary.
             - Thank the instructor in a proper and considerate manner.
 
-            The feedback should focus on the following areas (with the ideal condition in brackets):
+            The feedback for student submission should focus on the following areas (with the ideal condition in brackets):
             1. Providing Context & Background (The student delivers clear and detailed context, steps taken, and error messages).
             2. Clarity (The conversation is clear and easy to understand throughout).
             3. Expressing Thanks (The student thanks the instructor genuinely and appropriately).
             4. Appropriate Tone & Etiquette (The student maintains a professional and respectful tone throughout the conversation).
 
             Make sure to identify and highlight all grammar, punctuation, and style errors.
+
+            Accept the submission with max grade if the student's submission meets the ideal conditions in all areas. Otherwise reject the submission with status rejected. Include feedback in both cases according to the feedback guidelines.
 
             The student's submission will be as follows:
 
